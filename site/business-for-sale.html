@@ -71,6 +71,20 @@
   </div>
 </section>
 
+<!-- INVENTORY -->
+<section class="container" id="inventory">
+  <div class="sec-head"><div><span class="eyebrow">Included in the deal</span><h2>The inventory &amp; assets</h2><p>Real, photographed stock and fixtures that come with the business — new-in-box designer sport sunglasses, retail display cases, and a full office. Sorted by estimated retail value.</p></div></div>
+  <div style="background:var(--ink);color:#fff;border-radius:12px;padding:26px 30px;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between;margin-bottom:30px;box-shadow:var(--shadow)">
+    <div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--accent-2)">Estimated retail value of inventory &amp; assets</div><div style="font-family:'Oswald';font-size:clamp(40px,6vw,68px);color:var(--accent);line-height:1" id="inv-total">$0</div></div>
+    <div style="text-align:center"><div style="font-family:'Oswald';font-size:clamp(28px,4vw,44px)" id="inv-count">0</div><div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6)">documented lots</div></div>
+    <div style="text-align:center;border-left:1px solid var(--line-dark);padding-left:26px"><div style="font-family:'Oswald';font-size:clamp(28px,4vw,44px);color:#fff">$10,000</div><div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6)">your buy-in as partner</div></div>
+    <a href="/partner.html" class="btn btn-solid">Claim the opportunity →</a>
+  </div>
+  <div class="grid cols-4" id="inv-grid"></div>
+  <div class="center" style="margin-top:26px"><button id="inv-more" class="btn btn-dark" style="display:none">Show all lots</button></div>
+  <p class="muted" style="font-size:13px;margin-top:16px">Values are estimated retail figures for illustration; actual counts and condition verified during due diligence. Photos are the real inventory.</p>
+</section>
+
 <section class="container">
   <div class="sec-head" style="justify-content:center;text-align:center"><div><span class="eyebrow">Who we're looking for</span><h2>The right operating partner</h2></div></div>
   <div class="grid cols-3">
@@ -98,6 +112,37 @@
   </div>
   <div class="foot-bottom"><span>© 2026 ADS Sports Eyewear.</span><span>Brand names are trademarks of their respective owners.</span></div>
 </div></footer>
+<script src="/assets/js/inventory.js"></script>
+<script>
+(function(){
+  var items = window.ADS_INVENTORY||[], total = window.ADS_INV_TOTAL||0;
+  var usd = function(n){ return '$'+Number(n).toLocaleString('en-US'); };
+  var t = document.getElementById('inv-total'); if(t) t.textContent = usd(total);
+  var c = document.getElementById('inv-count'); if(c) c.textContent = items.length;
+  var g = document.getElementById('inv-grid');
+  var more = document.getElementById('inv-more');
+  function card(it){
+    return '<a class="card" href="/partner.html" style="text-decoration:none">'
+      + '<div class="ph"><span class="tag hot">'+usd(it.val)+'</span>'
+      + '<img loading="lazy" src="'+it.u+'" alt="'+it.cat+' — ADS Sports Eyewear inventory"></div>'
+      + '<div class="body" style="padding:12px 14px"><div class="brandline">Inventory Lot</div>'
+      + '<h3 style="font-size:16px;margin:3px 0 2px">'+it.cat+'</h3>'
+      + '<div class="price" style="font-size:16px">'+usd(it.val)+' <span style="font-size:12px;color:var(--muted);font-weight:400">est. retail</span></div></div></a>';
+  }
+  if(g){
+    var FIRST = 24;
+    g.innerHTML = items.slice(0, FIRST).map(card).join('');
+    if(more && items.length > FIRST){
+      more.style.display = '';
+      more.textContent = 'Show all ' + items.length + ' lots';
+      more.addEventListener('click', function(){
+        g.insertAdjacentHTML('beforeend', items.slice(FIRST).map(card).join(''));
+        more.style.display = 'none';
+      });
+    }
+  }
+})();
+</script>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>

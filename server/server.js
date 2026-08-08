@@ -25,7 +25,8 @@ async function coreLead(lead) {
 async function coreEmail(to, subject, html) {
   const h = coreHeaders(); if (!h) return false;
   try {
-    const r = await fetch(`${CORE_BASE}/api/core/email`, { method: "POST", headers: h, body: JSON.stringify({ to, subject, html, provider: "google_workspace" }), signal: AbortSignal.timeout(12000) });
+    // Zapmail is the reliable transactional path (Google Workspace SMTP creds are broken on Core).
+    const r = await fetch(`${CORE_BASE}/api/core/email`, { method: "POST", headers: h, body: JSON.stringify({ to, subject, html, provider: "zapmail" }), signal: AbortSignal.timeout(15000) });
     const j = await r.json().catch(() => ({})); return !!(r.ok && (j.ok === undefined || j.ok));
   } catch { return false; }
 }
@@ -57,10 +58,8 @@ const server = http.createServer((req, res) => {
       `Why a great partner: ${pitch}`,
     ].join("\n");
 
-    // 1) CRM lead into the JV Core
-    const leadOk = await coreLead({ name, email, phone, notes, creatorRef: "adseyewear-partner" });
-
-    // 2) Notify the owner
+    // Respond instantly — then push the CRM lead + owner email in the background (SMTP is slow).
+    send(200, { ok: true });
     const html = `<div style="font-family:Arial,sans-serif;font-size:15px;color:#111">
       <h2 style="font-family:Arial;color:#ea5a1e;margin:0 0 8px">New ADS Eyewear partner application</h2>
       <table cellpadding="6" style="border-collapse:collapse">
@@ -74,11 +73,8 @@ const server = http.createServer((req, res) => {
       <p style="margin:14px 0 4px"><b>Why they'd be a great partner:</b></p>
       <p style="white-space:pre-wrap;background:#f6f4ef;padding:12px;border-radius:8px">${esc(pitch)}</p>
       <p style="color:#888;font-size:12px">Submitted via adseyewear.com/partner.html</p></div>`;
-    const emailOk = await coreEmail(OWNER_EMAIL, `🕶️ New ADS Eyewear partner: ${name} (${phone})`, html);
-
-    // Consider it a success if either the CRM or the email got through.
-    if (leadOk || emailOk) return send(200, { ok: true });
-    return send(502, { error: "We couldn't submit right now — please try again or reach us on Instagram." });
+    coreLead({ name, email, phone, notes, creatorRef: "adseyewear-partner" }).catch(() => {});
+    coreEmail(OWNER_EMAIL, `🕶️ New ADS Eyewear partner: ${name} (${phone})`, html).catch(() => {});
   });
 });
 server.listen(PORT, "127.0.0.1", () => console.log(`ADS partner service on :${PORT}`));
