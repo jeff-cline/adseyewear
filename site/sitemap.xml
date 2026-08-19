@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://adseyewear.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>https://adseyewear.com/shop.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://adseyewear.com/business-for-sale.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://adseyewear.com/partner.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://adseyewear.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://adseyewear.com/shop.html</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adseyewear.com/faq.html</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adseyewear.com/guides.html</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adseyewear.com/business-for-sale.html</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adseyewear.com/partner.html</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/color-blind-glasses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/color-blind-test/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/ray-ban-color-blind-glasses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/glasses-for-blue-green-colorblindness/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/glasses-for-red-green-colorblindness/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/oakley-color-blind-glasses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/lavender-lens-color-blind-glasses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/red-lens-color-blind-glasses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/product/color-blind-ski-goggles-inserts/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Oakley-Sunglasses-Buyers-Guide</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adseyewear.com/Oakley-Lens-Colors</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Selecting-a-Lens-Color</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Sunglasses/2/Prescription/4/Oakley/17</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adseyewear.com/Ski-Goggles/12/Prescription-Ski-Goggles/33/Oakley-Ski-Goggles/127</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Shop-by-Activity/5/Prescription/14/Youth-Sport/62</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adseyewear.com/Shop-by-Activity/5/Prescription/14/Tactical-Shooting/65</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Shop-by-Activity/5/Prescription/14/Motorcycle-Sunglasses/69</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Shop-by-Activity/5/Prescription/14/Baseball-Softball/59</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Shop-by-Activity/5/Prescription/14/Cycling/66</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Sunglasses/2/Prescription/4/Panoptx-7Eye/8</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Sunglasses/2/Prescription/4/Wiley-X/21</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Lenticular-Lenses-for-High-Prescriptions</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/Prescription-Ski-Goggle-Reviews-and-FAQ</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adseyewear.com/FAQ/ansi-z87-1-safety-glasses-and-rx-prescription-lenses/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

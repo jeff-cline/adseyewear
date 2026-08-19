@@ -1,0 +1,73 @@
+{
+  "key": "selecting-a-lens-color",
+  "metaTitle": "Selecting a Lens Color: Driving, Brown vs Gray | ADS",
+  "metaDesc": "How to select a sunglass lens color — the best lens color for driving and brown vs gray polarized lenses explained by condition and sport. Free expert help.",
+  "ogTitle": "Selecting a Lens Color — Driving, Brown vs. Gray Polarized",
+  "h1": "Selecting a Lens Color",
+  "heroSub": "A practical guide to selecting a sunglass lens color by condition — the best lens color for driving, and the real difference between brown vs gray polarized lenses — with free, no-pressure help from an ADS specialist.",
+  "heroImg": "aviator.jpg",
+  "heroAlt": "Selecting a lens color for driving — polarized sunglasses behind the wheel",
+  "quickAnswer": "<p>To <b>select a lens color</b>, match the tint to your light and task. <b>For driving</b>, neutral <b>gray</b> or <b>brown/copper</b> polarized lenses are best: gray keeps colors true and cuts brightness, while brown adds contrast and depth perception. In the <b>brown vs gray polarized</b> debate, gray wins for bright, true-color comfort and brown wins for contrast in variable light. Both cut glare when polarized.</p>",
+  "leadHeading": "Not sure which tint? Free expert help",
+  "leadSub": "Tell us how and where you'll drive or play, and an ADS specialist will follow up with the exact lens color to choose and pricing.",
+  "ctaHeading": "Choose a lens color with confidence",
+  "ctaSub": "Free, no-pressure guidance matching lens color and polarization to driving, sport and your everyday light.",
+  "intro": [
+    "<p class='lead'>Sunglass lenses come in every color imaginable, and most people pick by looks — then squint anyway. <b>Selecting a lens color</b> the right way is simple once you know what each tint does: it's about the light you're in and the task at hand. Two questions dominate our inbox — <b>what's the best sunglass lens color for driving</b>, and <b>brown vs gray polarized</b> — so we'll answer both head-on.</p>",
+    "<p>Below we cover the core tints and what they're good for, then dig into driving and the brown-versus-gray decision, including where <b>grey polarized lenses</b> shine. Get the tint right and your eyes relax, contrast improves, and glare stops fighting you. Want a quick gut-check? An ADS specialist will pick your tint for free.</p>"
+  ],
+  "sections": [
+    {
+      "h2": "Best sunglass lens color for driving",
+      "body": [
+        "<p>The <b>best sunglass lens color for driving</b> is one that cuts glare and brightness without distorting the colors of traffic lights, brake lights and signage. That points to two tints: neutral <b>gray</b> and warm <b>brown/copper</b> — ideally <b>polarized</b> to kill the blinding reflections off wet roads, hoods and windshields.</p>",
+        "<div class='callout'><b>For driving, avoid:</b> very dark tints that make dashboards and tunnels too dim, and strong blue, pink or mirrored fashion tints that can shift the color of traffic signals. A medium gray or brown polarized lens is the safe, comfortable default.</div>"
+      ],
+      "figure": {
+        "img": "aviator.jpg",
+        "alt": "Polarized aviator sunglasses used for driving to reduce road glare",
+        "caption": "For driving, a medium gray or brown polarized lens cuts road glare while keeping traffic signals true."
+      },
+      "subs": [
+        { "h3": "Why polarized lenses help for driving", "body": "<p>Polarization filters out the horizontal glare that bounces off wet pavement, car hoods and the windshield ahead of you — the exact glare that makes you flinch and lose the road for a second. For daytime driving, <b>polarized</b> gray or brown is hard to beat. (One caveat: polarization can dim some LCD dashboard and phone screens.)</p>" },
+        { "h3": "Gray for true color, brown for depth", "body": "<p><b>Gray</b> is the neutral choice for driving: it darkens the scene evenly and keeps colors accurate, so signals and signs look right. <b>Brown/copper</b> adds contrast and can sharpen your read of the road's surface and depth, which many drivers prefer on longer trips and in mixed light.</p>" },
+        { "h3": "Night and variable-light driving", "body": "<p>For dusk, rain or heavy overcast, skip dark tints entirely — a very light yellow or a photochromic lens that lightens indoors is safer. No sunglass tint is meant for true night driving; clear or lightly tinted lenses are the right tool there.</p>" }
+      ]
+    },
+    {
+      "h2": "Brown vs gray polarized lenses",
+      "body": [
+        "<p>The <b>brown vs gray polarized</b> question comes down to a simple trade-off: <b>true color and comfort</b> versus <b>contrast and depth</b>. Both block glare equally when polarized, so it's really about how you want the world to look and what you're doing.</p>"
+      ],
+      "figure": {
+        "svg": "<svg viewBox='0 0 960 220' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Brown versus gray polarized lens comparison swatches'><rect width='960' height='220' fill='#fff'/><text x='30' y='36' font-family='Oswald,sans-serif' font-size='16' fill='#0b0f14' letter-spacing='1'>BROWN vs GRAY POLARIZED</text><g><rect x='60' y='60' width='360' height='110' rx='14' fill='#5a4632'/><text x='240' y='115' text-anchor='middle' font-family='Oswald,sans-serif' font-size='20' fill='#f5efe6'>BROWN</text><text x='240' y='142' text-anchor='middle' font-family='Manrope,sans-serif' font-size='12' fill='#e7ddcf'>Contrast &amp; depth &#183; variable light</text></g><g><rect x='540' y='60' width='360' height='110' rx='14' fill='#3b3f45'/><text x='720' y='115' text-anchor='middle' font-family='Oswald,sans-serif' font-size='20' fill='#eef1f4'>GRAY</text><text x='720' y='142' text-anchor='middle' font-family='Manrope,sans-serif' font-size='12' fill='#d7dce1'>True color &amp; comfort &#183; bright sun</text></g><text x='480' y='200' text-anchor='middle' font-family='Manrope,sans-serif' font-size='12' fill='#6b7280'>Both cut glare equally when polarized</text></svg>",
+        "caption": "Brown vs gray polarized: brown boosts contrast and depth for variable light, gray keeps colors true and comfortable in bright sun. Polarization cuts glare either way."
+      },
+      "subs": [
+        { "h3": "When to choose gray polarized lenses", "body": "<p>Choose <b>grey polarized lenses</b> for bright, sunny days and any time accurate color matters — driving, everyday wear, boating in strong sun. Gray reduces overall brightness without warming or shifting colors, which is why it's the most popular all-purpose polarized tint.</p>" },
+        { "h3": "When to choose brown polarized lenses", "body": "<p>Choose <b>brown/copper polarized</b> when you want more pop and depth: golf, fishing, driving in mixed light, and overcast or variable conditions. Brown filters a bit of blue haze, which heightens contrast and can make surfaces and distances easier to judge.</p>" },
+        { "h3": "Oakley's take: Prizm on top of tint", "body": "<p>Oakley builds on these base tints with <b>Prizm</b>, tuning brown- and rose-based lenses for specific sports. If you like the idea of brown-for-contrast but want it dialed in for your activity, see our <a href='/Oakley-Lens-Colors'>Oakley lens colors guide</a> and the broader <a href='/Oakley-Sunglasses-Buyers-Guide'>Oakley lens guide</a>.</p>" }
+      ]
+    },
+    {
+      "h2": "Matching lens color to your activity",
+      "body": [
+        "<p>Beyond driving, the same logic applies everywhere: pick the tint for the light and the surface. Here's how the common choices shake out so you can select a lens color for whatever you do most.</p>"
+      ],
+      "subs": [
+        { "h3": "Bright sun and open water", "body": "<p>Go dark and polarized — <b>gray</b> for true color, or a dark brown/copper for contrast. Polarization is close to mandatory near water, where glare is harshest. This is also where a sport-tuned Prizm Water lens excels.</p>" },
+        { "h3": "Golf, cycling and running", "body": "<p>These reward contrast, so <b>brown, rose or a matching Prizm</b> tint helps you read the fairway, road or trail. Lighter contrast tints work for cloudy days; darker versions for full sun.</p>" },
+        { "h3": "Get it in your prescription", "body": "<p>Any of these tints can be made to your prescription — including brown and gray polarized in Oakley frames via Oakley Authentic Prescription Lenses. See our <a href='/Sunglasses/2/Prescription/4/Oakley/17'>Oakley prescription sunglasses guide</a> to keep your favorite tint and see sharply.</p>" }
+      ]
+    }
+  ],
+  "faq": [
+    { "q": "What is the best sunglass lens color for driving?", "a": "Neutral gray and brown/copper are the best lens colors for driving, ideally polarized to cut road glare. Gray keeps traffic signals and signs true to color, while brown adds contrast and depth. Avoid very dark or strongly colored fashion tints that can distort signal colors or dim the scene too much." },
+    { "q": "Brown vs gray polarized lenses — which is better?", "a": "Neither is universally better; they suit different goals. Gray keeps colors true and is most comfortable in bright sun, while brown boosts contrast and depth perception in variable light. Both block glare equally when polarized, so choose gray for true color and brown for contrast." },
+    { "q": "Are gray polarized lenses good for everyday use?", "a": "Yes. Grey polarized lenses are the most popular all-purpose choice because they reduce brightness without shifting colors, and they cut glare off roads and water. They work well for driving, everyday wear and bright, sunny conditions." },
+    { "q": "Should I get polarized lenses for driving?", "a": "For daytime driving, yes — polarized lenses remove the horizontal glare off wet roads, hoods and windshields that causes squinting. The one caveat is that polarization can dim some LCD dashboard displays and phone screens, so check that your car's screens are still readable." },
+    { "q": "What lens color is best for low light or overcast days?", "a": "Lighter tints like yellow, gold, rose and Persimmon are best for low light and overcast conditions because they let more light through and enhance contrast. Save dark gray and brown lenses for bright sun, and use light or photochromic lenses when the light is dim." },
+    { "q": "Does lens color affect UV protection?", "a": "No. UV protection comes from the lens material and coating, not the tint, so a light lens can offer the same 100% UV protection as a dark one. Always confirm the lenses block 100% of UVA and UVB — all genuine Oakley Plutonite lenses do, regardless of color." },
+    { "q": "Can I get brown or gray polarized lenses in a prescription?", "a": "Yes. Brown and gray polarized lenses are available in prescription, including in Oakley frames through Oakley Authentic Prescription Lenses. Share your prescription and we'll confirm the tint and frame combination that fits your needs." }
+  ]
+}

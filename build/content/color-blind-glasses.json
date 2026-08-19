@@ -1,0 +1,69 @@
+{
+  "key": "color-blind-glasses",
+  "metaTitle": "Color Blind Glasses: EnChroma, Cost & How They Work (2026 Guide) | ADS",
+  "metaDesc": "How color blind glasses like EnChroma work, what they cost, whether they really work, and how to choose the right pair for red-green color blindness. Free expert help.",
+  "ogTitle": "Color Blind Glasses — Do They Work, and What Do They Cost?",
+  "h1": "Color Blind Glasses",
+  "heroSub": "EnChroma, Pilestone and prescription color-correction lenses — how they actually work, what they cost, who they help, and how to pick the right pair. Plus free, no-pressure guidance from an eyewear specialist.",
+  "heroSvg": "<svg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Color blind glasses lens increasing color contrast'><defs><linearGradient id='dull' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#6b6f52'/><stop offset='1' stop-color='#7a5f57'/></linearGradient><linearGradient id='vivid' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#e23b2e'/><stop offset='.5' stop-color='#f3a03c'/><stop offset='1' stop-color='#2f9e44'/></linearGradient></defs><rect width='800' height='600' fill='#0b0f14'/><rect x='40' y='120' width='340' height='360' rx='16' fill='url(#dull)'/><rect x='420' y='120' width='340' height='360' rx='16' fill='url(#vivid)'/><g fill='#0b0f14' opacity='.35'><circle cx='120' cy='210' r='34'/><circle cx='210' cy='300' r='46'/><circle cx='300' cy='210' r='28'/><circle cx='160' cy='390' r='38'/><circle cx='290' cy='380' r='30'/></g><g fill='#0b0f14' opacity='.28'><circle cx='500' cy='210' r='34'/><circle cx='590' cy='300' r='46'/><circle cx='680' cy='210' r='28'/><circle cx='540' cy='390' r='38'/><circle cx='670' cy='380' r='30'/></g><text x='210' y='530' fill='#8b8f96' font-family='Oswald,sans-serif' font-size='26' text-anchor='middle' letter-spacing='2'>WITHOUT FILTER</text><text x='590' y='530' fill='#f3a03c' font-family='Oswald,sans-serif' font-size='26' text-anchor='middle' letter-spacing='2'>WITH FILTER</text></svg>",
+  "quickAnswer": "<p><b>Color blind glasses</b> use special notch filters to remove wavelengths of light where red and green signals overlap. For many people with mild-to-moderate <b>red-green color blindness</b>, that makes reds and greens look more distinct and vivid. They don't cure color blindness, and they don't work for everyone — but for the right person they can be a genuine \"wow\" moment.</p>",
+  "leadHeading": "Find the right color blind glasses — free help",
+  "leadSub": "Not sure if EnChroma, Pilestone or a prescription lens is right for you? Give us your details and an ADS specialist will follow up with honest options and pricing.",
+  "ctaHeading": "See color differently",
+  "ctaSub": "Get free, no-pressure help choosing color blind glasses that fit your vision, your prescription and your budget.",
+  "intro": [
+    "<p class='lead'>If reds and greens have always looked muddy or hard to tell apart, <b>color blind glasses</b> promise something remarkable: colors that suddenly \"pop.\" Brands like <b>EnChroma</b> and <b>Pilestone</b> have made viral videos of people tearing up the first time they wear a pair. But do color blind glasses really work, how much do they cost, and are they right for <i>your</i> type of color blindness? This guide answers all of it in plain English.</p>",
+    "<p>Roughly 1 in 12 men and 1 in 200 women have some form of color vision deficiency — most commonly <b>red-green color blindness</b>. Color blind glasses (also called <b>color-correction</b> or <b>color-correcting glasses</b>) are the most popular non-medical way to enhance color perception, and they come in outdoor, indoor and full-prescription versions.</p>"
+  ],
+  "sections": [
+    {
+      "h2": "How do color blind glasses work?",
+      "body": [
+        "<p>Most red-green color blindness is caused by red and green cone cells in the eye whose light-sensitivity ranges overlap too much, so the brain receives muddled signals. <b>Color blind glasses work</b> by using a precision \"notch\" filter that blocks a narrow band of light exactly where that overlap happens. Removing those wavelengths increases the contrast between the red and green signals, so the colors your brain receives are more separated — and therefore more distinct.</p>",
+        "<div class='callout'><b>Important:</b> This is <b>enhancement, not a cure.</b> The glasses don't add missing cones or give you \"normal\" color vision. They boost the contrast your existing cones can detect. That's why results vary from dramatic to subtle from person to person.</div>"
+      ],
+      "figure": {
+        "svg": "<svg viewBox='0 0 960 300' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Notch filter removes overlapping wavelengths to separate red and green'><rect width='960' height='300' fill='#fff'/><g font-family='Manrope,sans-serif' font-size='14' fill='#6b7280'><text x='30' y='40'>Red &amp; green cone response — overlapping (confusable)</text></g><path d='M40 200 Q220 60 400 200' fill='none' stroke='#e23b2e' stroke-width='4'/><path d='M180 200 Q360 60 540 200' fill='none' stroke='#2f9e44' stroke-width='4'/><rect x='300' y='70' width='120' height='150' fill='#f3a03c' opacity='.18'/><text x='360' y='250' text-anchor='middle' font-family='Oswald,sans-serif' font-size='14' fill='#ea5a1e' letter-spacing='1'>NOTCH FILTER BLOCKS THIS BAND</text><g transform='translate(560,0)'><path d='M40 200 Q180 70 300 200' fill='none' stroke='#e23b2e' stroke-width='4'/><path d='M100 200 Q240 70 360 200' fill='none' stroke='#2f9e44' stroke-width='4'/><text x='200' y='250' text-anchor='middle' font-family='Oswald,sans-serif' font-size='14' fill='#2f9e44' letter-spacing='1'>SIGNALS SEPARATED &#8594; MORE CONTRAST</text></g></svg>",
+        "caption": "How color-correction lenses work: a notch filter removes the band of light where red and green cone responses overlap, separating the two signals so colors look more distinct."
+      },
+      "subs": [
+        { "h3": "How do EnChroma glasses work?", "body": "<p>EnChroma glasses use a patented multi-notch filter built into the lens coating that targets several overlap points across the spectrum at once. It's the same core principle — remove the confusing wavelengths — tuned specifically for common red-green deficiencies (deutan and protan types).</p>" },
+        { "h3": "Do color blind glasses really work?", "body": "<p>For many people with <b>mild-to-moderate red-green color blindness (anomalous trichromacy)</b>, yes — colors look noticeably richer and easier to tell apart, especially outdoors in bright light. For people with <b>severe or complete color blindness (dichromacy or monochromacy)</b>, the effect is usually small or absent, because there aren't two overlapping signals to separate. The honest answer: they work well for some, a little for others, and not at all for a few. That's exactly why we offer a free consult before you buy.</p>" },
+        { "h3": "Glasses that let you see color", "body": "<p>You'll see color blind glasses marketed as \"glasses that let you see color\" or \"glasses that fix color blindness.\" A fairer description is <i>glasses that make certain colors easier to distinguish.</i> The wow-factor reactions are real for the right candidates — but managing expectations up front is the difference between a happy customer and a returned pair.</p>" }
+      ]
+    },
+    {
+      "h2": "How much do color blind glasses cost?",
+      "body": [
+        "<p>The short answer: <b>color blind glasses cost roughly $30 to $430</b> depending on the brand, the lens technology and whether you need a prescription. Here's how the popular options compare.</p>",
+        "<table><thead><tr><th>Option</th><th>Typical price</th><th>Best for</th></tr></thead><tbody><tr><td>Pilestone &amp; value brands</td><td>$30 – $100</td><td>Trying color-correction affordably</td></tr><tr><td>EnChroma outdoor</td><td>$200 – $350</td><td>Bright outdoor color boost</td></tr><tr><td>EnChroma indoor / hybrid</td><td>$300 – $430</td><td>Screens, indoor lighting, work</td></tr><tr><td>Prescription color blind glasses</td><td>Add ~$100 – $200</td><td>Anyone who wears Rx glasses</td></tr></tbody></table>"
+      ],
+      "subs": [
+        { "h3": "How much are EnChroma glasses?", "body": "<p><b>EnChroma glasses cost</b> about $200–$350 for outdoor styles and up to roughly $430 for indoor/hybrid and premium frames. Prescription EnChroma lenses add to that. Prices shift with frame choice and any sales, so ask us for current pricing before you buy.</p>" },
+        { "h3": "Why do color blind glasses cost that much?", "body": "<p>The price reflects the engineered lens filter — precisely tuned coatings applied across many layers — not the frame. Cheaper pairs use simpler tints that can help a little; premium pairs use sharper, multi-notch filters designed for specific deficiency types.</p>" },
+        { "h3": "Are cheaper color blind glasses worth it?", "body": "<p>Value brands can be a smart, low-risk way to find out whether color-correction helps <i>you</i> at all before investing in a premium prescription pair. If a $40 pair gives you a noticeable lift, a precision lens will usually do more. If it does nothing, that's useful information too.</p>" }
+      ]
+    },
+    {
+      "h2": "Choosing color blind glasses for your type",
+      "body": [
+        "<p>The best color blind glasses for you depend on <b>which type of color blindness</b> you have and <b>where</b> you'll use them. Red-green types (deutan and protan) are the primary target of today's lenses; blue-yellow (tritan) types are less commonly served.</p>"
+      ],
+      "subs": [
+        { "h3": "Red-green color blind glasses", "body": "<p>The vast majority of color-correction lenses — including most EnChroma and Pilestone models — are built for <b>red-green color blindness.</b> If you struggle to tell reds, greens, browns and oranges apart, this is your category. <a href='/FAQ/product/glasses-for-red-green-colorblindness/'>See our red-green colorblindness guide →</a></p>" },
+        { "h3": "Prescription color blind glasses", "body": "<p>Yes — you can get <b>prescription color blind glasses</b> that correct your eyesight and enhance color at the same time, so you don't have to choose between seeing sharply and seeing color. Tell us your prescription and we'll lay out the options.</p>" },
+        { "h3": "Best color blind glasses: how to decide", "body": "<p>There's no single \"best\" pair — the right choice balances your deficiency type, indoor vs. outdoor use, whether you need a prescription, and budget. A quick, free consult narrows 20 options down to the two or three worth your money.</p>" },
+        { "h3": "Indoor vs. outdoor color blind glasses", "body": "<p>Outdoor lenses are darker and shine in bright sunlight; indoor/hybrid lenses are lighter and tuned for screens and artificial light. Many people who want an everyday pair choose a hybrid, or own one of each.</p>" }
+      ]
+    }
+  ],
+  "faq": [
+    { "q": "Do color blind glasses really work?", "a": "For many people with mild-to-moderate red-green color blindness, yes — reds and greens look more distinct and vivid, especially outdoors. They work far less, or not at all, for people with severe or total color blindness, because the lenses enhance existing color signals rather than replacing missing ones. Results vary by person and by the type of deficiency." },
+    { "q": "How much do color blind glasses cost?", "a": "Roughly $30 to $430. Value brands like Pilestone run $30–$100, EnChroma outdoor styles run about $200–$350, and indoor/hybrid or premium models can reach $430. Adding a prescription typically adds $100–$200." },
+    { "q": "How much do EnChroma glasses cost?", "a": "EnChroma glasses cost about $200–$350 for outdoor styles and up to around $430 for indoor/hybrid and premium frames. Prescription lenses cost extra. Pricing varies by frame and current promotions." },
+    { "q": "How do color blind glasses work?", "a": "They use a precision notch filter that blocks a narrow band of light where red and green cone responses overlap. Removing those wavelengths increases the contrast between red and green signals, making the colors look more separated and distinct to the wearer." },
+    { "q": "Do color blind glasses cure color blindness?", "a": "No. Color blind glasses do not cure or permanently change color blindness. They enhance color contrast only while you're wearing them, and the effect stops when you take them off." },
+    { "q": "Can you get prescription color blind glasses?", "a": "Yes. Color-correction lenses can be made with your vision prescription, so you get sharp eyesight and enhanced color at the same time. Share your prescription and we'll walk you through the options." },
+    { "q": "Do color blind glasses work for all types of color blindness?", "a": "No. Most are designed for red-green color blindness (deutan and protan types). They help blue-yellow (tritan) deficiencies far less, and offer little benefit for complete color blindness (monochromacy)." }
+  ]
+}

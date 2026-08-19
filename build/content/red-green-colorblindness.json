@@ -1,0 +1,68 @@
+{
+  "key": "red-green-colorblindness",
+  "metaTitle": "Red-Green Color Blind Glasses & Corrective Lenses | ADS",
+  "metaDesc": "Red-green color blindness explained: how corrective lenses work, whether they help, affordable options, and how to choose red-green color blind glasses.",
+  "ogTitle": "Red-Green Color Blindness — Corrective Lenses That Help",
+  "h1": "Glasses for Red-Green Colorblindness",
+  "heroSub": "The most common type of color blindness, how color blind corrective lenses actually help red and green look distinct, affordable options, and how to pick the right pair.",
+  "heroSvg": "<svg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Red and green muddled versus separated by a correction lens'><defs><linearGradient id='mud' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#8a6b3a'/><stop offset='1' stop-color='#6e7a3a'/></linearGradient><linearGradient id='pop' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#e23b2e'/><stop offset='1' stop-color='#2f9e44'/></linearGradient></defs><rect width='800' height='600' fill='#0b0f14'/><rect x='40' y='120' width='340' height='360' rx='16' fill='url(#mud)'/><rect x='420' y='120' width='340' height='360' rx='16' fill='url(#pop)'/><text x='210' y='530' fill='#8b8f96' font-family='Oswald,sans-serif' font-size='24' text-anchor='middle' letter-spacing='2'>RED &amp; GREEN MUDDLED</text><text x='590' y='530' fill='#f3a03c' font-family='Oswald,sans-serif' font-size='24' text-anchor='middle' letter-spacing='2'>SEPARATED</text></svg>",
+  "quickAnswer": "<p><b>Red-green color blindness</b> is the most common color vision deficiency — deutan and protan types — where reds, greens, browns and oranges are easy to confuse. <b>Color blind corrective lenses</b> use a notch filter to remove the band of light where red and green cone signals overlap, so those colors look more distinct. For many people with mild-to-moderate red-green deficiency the effect is real; it's enhancement, not a cure, and results vary.</p>",
+  "leadHeading": "Find red-green color blind glasses that fit you",
+  "leadSub": "Deutan or protan, mild or strong, prescription or not — tell us your details and an ADS specialist will recommend honest options and pricing.",
+  "ctaHeading": "See red and green clearly",
+  "ctaSub": "Free, no-pressure help choosing red-green color blind glasses matched to your vision and budget — including affordable places to start.",
+  "intro": [
+    "<p class='lead'>If you mix up reds and greens — or browns, oranges and the shades in between — you almost certainly have <b>red-green color blindness</b>, the most common color vision deficiency by a wide margin. The good news is that this is exactly the type <b>color blind corrective lenses</b> are built for. A well-made <b>red and green color blind glasses</b> lens can make those colors look noticeably more separate and vivid, especially outdoors.</p>",
+    "<p>This guide explains how <b>color blind correction lenses</b> work for red-green vision, whether they'll help <i>you</i>, and how to find an affordable pair to start with. Red-green comes in two flavors — deutan (green-weak) and protan (red-weak) — and knowing which you have helps us point you to the right lens. For the broader picture, our <a href='/FAQ/product/color-blind-glasses/'>color blind glasses overview</a> covers brands and costs in depth.</p>"
+  ],
+  "sections": [
+    {
+      "h2": "How do color blind corrective lenses work for red-green?",
+      "body": [
+        "<p>Red-green deficiency happens when the red and green cone cells in your eye have light-sensitivity ranges that overlap too much, so your brain gets muddled signals. <b>Color blind correction lenses</b> use a precision notch filter that blocks a narrow band of light right at that overlap. Removing those wavelengths increases the contrast between the red and green signals your cones send, so reds and greens — plus the browns and oranges built from them — look more distinct.</p>",
+        "<div class='callout'><b>Enhancement, not a cure:</b> These lenses don't add missing cones or give you \"normal\" color vision. They sharpen the contrast your existing cones can detect, which is why the effect ranges from dramatic to subtle depending on your deficiency.</div>"
+      ],
+      "figure": {
+        "svg": "<svg viewBox='0 0 960 300' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Notch filter separates overlapping red and green cone responses'><rect width='960' height='300' fill='#fff'/><text x='30' y='40' font-family='Manrope,sans-serif' font-size='14' fill='#6b7280'>Red &amp; green cone response — overlapping (confusable)</text><path d='M40 210 Q220 70 400 210' fill='none' stroke='#e23b2e' stroke-width='4'/><path d='M180 210 Q360 70 540 210' fill='none' stroke='#2f9e44' stroke-width='4'/><rect x='300' y='80' width='120' height='150' fill='#f3a03c' opacity='.18'/><text x='360' y='260' text-anchor='middle' font-family='Oswald,sans-serif' font-size='13' fill='#ea5a1e' letter-spacing='1'>NOTCH FILTER BLOCKS THIS BAND</text><g transform='translate(560,0)'><path d='M40 210 Q180 80 300 210' fill='none' stroke='#e23b2e' stroke-width='4'/><path d='M100 210 Q240 80 360 210' fill='none' stroke='#2f9e44' stroke-width='4'/><text x='200' y='260' text-anchor='middle' font-family='Oswald,sans-serif' font-size='13' fill='#2f9e44' letter-spacing='1'>SIGNALS SEPARATED &#8594; MORE CONTRAST</text></g></svg>",
+        "caption": "For red-green deficiency, a notch filter removes the band where red and green cone responses overlap, separating the two signals so the colors look more distinct."
+      },
+      "subs": [
+        { "h3": "Deutan vs. protan red-green types", "body": "<p>Deutan (green-weak) and protan (red-weak) are the two red-green subtypes. Both confuse reds and greens, but protans also see reds as dimmer. Good <b>red green color blind corrective lenses</b> are tuned slightly differently for each, which is why knowing your type helps you pick.</p>" },
+        { "h3": "Do red-green correction lenses really work?", "body": "<p>For many people with <b>mild-to-moderate red-green deficiency (anomalous trichromacy)</b>, yes — colors pop, especially in bright light. For <b>severe or complete</b> deficiency (dichromacy), the effect is smaller or absent, because there aren't two overlapping signals left to separate. That's why we recommend a free consult before you buy.</p>" },
+        { "h3": "Indoor vs. outdoor red-green lenses", "body": "<p>Outdoor lenses are darker and shine in sunlight; indoor/hybrid lenses are lighter for screens and office lighting. Many red-green wearers want an everyday pair and choose a hybrid, or keep one of each.</p>" }
+      ]
+    },
+    {
+      "h2": "Affordable red-green color blind sunglasses",
+      "body": [
+        "<p>You don't have to start with the priciest pair. <b>Affordable color blind sunglasses</b> for red-green vision are a smart, low-risk way to find out whether color-correction helps <i>you</i> at all. Typical prices run from about <b>$30 to $430</b>: value tints at the low end, engineered multi-notch filters and premium or prescription lenses at the high end.</p>",
+        "<table><thead><tr><th>Option</th><th>Typical price</th><th>Best for</th></tr></thead><tbody><tr><td>Value red-green tints</td><td>$30 – $100</td><td>Testing affordably before you commit</td></tr><tr><td>Engineered outdoor filters</td><td>$200 – $350</td><td>Bright outdoor color boost</td></tr><tr><td>Indoor / hybrid & prescription</td><td>$300 – $430+</td><td>Screens, work, sharp vision + color</td></tr></tbody></table>"
+      ],
+      "subs": [
+        { "h3": "Are affordable pairs worth it?", "body": "<p>Often, yes — as a test. If a $40 pair gives you a noticeable lift, a precision lens will usually do more. If it does nothing, that's valuable information before you spend on a premium <b>red green color blind glasses</b> pair.</p>" },
+        { "h3": "Prescription red-green color blind glasses", "body": "<p>You can get red-green <b>color blind glasses</b> made with your vision prescription, so you see sharply and get the color boost at once. Share your prescription and we'll lay out the options and pricing.</p>" },
+        { "h3": "Best red-green pair: how to decide", "body": "<p>There's no single best pair. The right choice balances your subtype (deutan vs. protan), indoor vs. outdoor use, prescription and budget. A quick, free consult narrows a crowded field to the two or three worth your money.</p>" }
+      ]
+    },
+    {
+      "h2": "Is it red-green or something else?",
+      "body": [
+        "<p>Because red-green is so common, it's easy to assume that's what you have — but confirming it changes what's worth buying. If your confusion is actually between blues and greens, correction lenses behave very differently, and red-green lenses won't be aimed at your problem.</p>"
+      ],
+      "subs": [
+        { "h3": "Confirm with a color blind test", "body": "<p>Take a <a href='/FAQ/product/color-blind-test/'>color blind test</a> to check whether you're deutan, protan or something else, then confirm with an eye doctor. An accurate type is the single biggest factor in whether a lens helps.</p>" },
+        { "h3": "Red-green vs. blue-green", "body": "<p>If blues and greens — not reds and greens — are your issue, read our <a href='/FAQ/product/glasses-for-blue-green-colorblindness/'>blue-green colorblindness guide</a> first. That rarer type is harder to help, and red-green lenses aren't built for it.</p>" },
+        { "h3": "Get free, honest guidance", "body": "<p>Tell us your type, how you'll use the glasses and your budget, and we'll recommend honest red-green options — including where to start cheap. No pressure, no hype.</p>" }
+      ]
+    }
+  ],
+  "faq": [
+    { "q": "What is red-green color blindness?", "a": "It's the most common color vision deficiency, where reds, greens, browns and oranges are easy to confuse. It comes in two subtypes — deutan (green-weak) and protan (red-weak) — caused by red and green cone cells whose sensitivity ranges overlap too much." },
+    { "q": "Do color blind corrective lenses work for red-green?", "a": "For many people with mild-to-moderate red-green deficiency, yes — reds and greens look more distinct and vivid, especially outdoors. They help far less for severe or complete deficiency, because there aren't two overlapping signals left to separate. It's enhancement, not a cure, and results vary." },
+    { "q": "How do red-green color blind glasses work?", "a": "They use a precision notch filter that blocks a narrow band of light where red and green cone responses overlap. Removing those wavelengths increases the contrast between the red and green signals, so those colors look more separated to the wearer." },
+    { "q": "How much do red-green color blind glasses cost?", "a": "Roughly $30 to $430. Value tints run $30–$100, engineered outdoor filters about $200–$350, and indoor/hybrid or premium models up to $430 or more. Adding a prescription typically adds $100–$200." },
+    { "q": "Are affordable color blind sunglasses worth trying?", "a": "Yes, as a low-risk test. An inexpensive pair tells you whether color-correction helps your eyes at all before you invest in a premium or prescription lens. If a cheap pair helps, a precision lens usually helps more." },
+    { "q": "What's the difference between deutan and protan?", "a": "Both are red-green types. Deutan is green-weak; protan is red-weak and also makes reds look dimmer. Correction lenses are tuned slightly differently for each, so knowing your subtype helps you choose." },
+    { "q": "Can I get red-green color blind glasses with my prescription?", "a": "Yes. Color-correction lenses can be made with your vision prescription, so you get sharp eyesight and the red-green color boost at the same time. Share your prescription and we'll walk you through the options." }
+  ]
+}

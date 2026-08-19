@@ -1,0 +1,67 @@
+{
+  "key": "color-blind-test",
+  "metaTitle": "Color Blind Test Online: Free Screening Guide (2026) | ADS",
+  "metaDesc": "Take a free color blind test online, learn what results mean, and why an Ishihara screening isn't a substitute for an eye doctor's diagnosis. Free help.",
+  "ogTitle": "Color Blind Test — Free Online Screening & What It Means",
+  "h1": "Color Blind Test",
+  "heroSub": "How online color blind tests work, what the plates and numbers actually measure, why a free screening isn't a medical diagnosis, and how to find out which type of color vision deficiency you have.",
+  "heroSvg": "<svg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Ishihara-style color blind test plate with a hidden number'><rect width='800' height='600' fill='#0b0f14'/><circle cx='400' cy='300' r='250' fill='#2b3a1e'/><g fill='#7fae52'><circle cx='300' cy='220' r='24'/><circle cx='360' cy='190' r='18'/><circle cx='430' cy='200' r='26'/><circle cx='500' cy='230' r='20'/><circle cx='540' cy='300' r='24'/><circle cx='300' cy='380' r='22'/><circle cx='370' cy='410' r='18'/><circle cx='470' cy='400' r='24'/><circle cx='250' cy='300' r='20'/></g><g fill='#c9552f'><circle cx='360' cy='250' r='22'/><circle cx='360' cy='300' r='22'/><circle cx='360' cy='350' r='22'/><circle cx='410' cy='250' r='22'/><circle cx='450' cy='300' r='22'/><circle cx='410' cy='350' r='22'/><circle cx='450' cy='250' r='20'/><circle cx='450' cy='350' r='20'/></g><text x='400' y='560' fill='#8b8f96' font-family='Oswald,sans-serif' font-size='24' text-anchor='middle' letter-spacing='2'>WHAT NUMBER DO YOU SEE?</text></svg>",
+  "quickAnswer": "<p>A <b>color blind test</b> is a quick screening — most often the <b>Ishihara plate test</b>, where you read numbers hidden in a field of colored dots. A <b>free online color blind test</b> can flag whether you likely have a red-green or blue-yellow deficiency and roughly how strong it is. It is a screening tool, not a diagnosis: only an eye doctor can confirm your type and severity with calibrated equipment.</p>",
+  "leadHeading": "Get help understanding your color blind test results",
+  "leadSub": "Took an online test and not sure what it means or what to do next? Share your results and an ADS specialist will explain your likely type and whether color-correction lenses could help.",
+  "ctaHeading": "Know your color vision",
+  "ctaSub": "Free, no-pressure help making sense of your color blind test and choosing the right next step for your eyes and budget.",
+  "intro": [
+    "<p class='lead'>If colors have always been confusing — traffic lights, ripe fruit, wires, map colors — a <b>color blind test</b> is the fastest way to find out why. The classic screening shows you plates of colored dots with a number or shape hidden inside; what you can and can't read points to the type and degree of color vision deficiency you have. This guide walks through how a <b>color blind test online</b> works, what the results mean, and where a free screening ends and a real diagnosis begins.</p>",
+    "<p>Online <b>color blind tests</b> are a great, low-pressure first step, and plenty of good <b>free color blind testing</b> tools exist. But screen brightness, color settings and lighting all affect the result, so treat any at-home test as a strong hint — not the final word. If it flags a deficiency, an eye doctor can confirm it, and we can help you understand whether <a href='/FAQ/product/color-blind-glasses/'>color blind glasses</a> are worth trying for your type.</p>"
+  ],
+  "sections": [
+    {
+      "h2": "How does a color blind test online work?",
+      "body": [
+        "<p>The most common <b>color blind test online</b> is a digital version of the <b>Ishihara plate test</b>. Each plate is a circle filled with dots in two color families; a number is drawn in one color family against a background of another. If your color vision is typical, the number jumps out. If you have a red-green deficiency, certain numbers blur into the background or a different number appears. Some <b>online color blind tests</b> add arrangement tasks — putting colored chips in order — to gauge how strong the deficiency is.</p>",
+        "<div class='callout'><b>Reality check:</b> A <b>free color blind test</b> on a phone or laptop runs on an uncalibrated screen in whatever light you happen to be in. That's fine for screening, but it's exactly why a passing or failing result online should be confirmed by a professional before you make decisions about work, licensing or lenses.</div>"
+      ],
+      "figure": {
+        "svg": "<svg viewBox='0 0 960 300' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Ishihara plate versus normal vision'><rect width='960' height='300' fill='#fff'/><circle cx='180' cy='150' r='120' fill='#e6ddc8'/><g fill='#c9552f'><circle cx='150' cy='110' r='16'/><circle cx='150' cy='150' r='16'/><circle cx='150' cy='190' r='16'/><circle cx='190' cy='110' r='16'/><circle cx='225' cy='150' r='16'/><circle cx='190' cy='190' r='16'/></g><g fill='#7fae52'><circle cx='120' cy='90' r='13'/><circle cx='250' cy='95' r='13'/><circle cx='110' cy='210' r='13'/><circle cx='250' cy='205' r='13'/><circle cx='95' cy='150' r='13'/></g><text x='180' y='290' text-anchor='middle' font-family='Manrope,sans-serif' font-size='16' fill='#6b7280'>Typical vision: the number is obvious</text><g transform='translate(520,0)'><circle cx='180' cy='150' r='120' fill='#d8d3c0'/><g fill='#b8996a'><circle cx='150' cy='110' r='16'/><circle cx='150' cy='150' r='16'/><circle cx='150' cy='190' r='16'/><circle cx='190' cy='110' r='16'/><circle cx='225' cy='150' r='16'/><circle cx='190' cy='190' r='16'/></g><g fill='#a89d78'><circle cx='120' cy='90' r='13'/><circle cx='250' cy='95' r='13'/><circle cx='110' cy='210' r='13'/><circle cx='250' cy='205' r='13'/><circle cx='95' cy='150' r='13'/></g><text x='180' y='290' text-anchor='middle' font-family='Manrope,sans-serif' font-size='16' fill='#6b7280'>Red-green deficiency: the number fades</text></g></svg>",
+        "caption": "In an Ishihara-style plate, a number is drawn in colors that people with red-green color blindness struggle to separate from the background — so it disappears for them but not for others."
+      },
+      "subs": [
+        { "h3": "Free color blind test online", "body": "<p>A good <b>free color blind test online</b> gives you the Ishihara-style plates plus a plain-English summary of your likely type — deutan, protan or tritan — and severity. Use it in good lighting on a screen at normal brightness, and take it more than once. Consistent results are more trustworthy than a single run.</p>" },
+        { "h3": "Colorblind number test & plates", "body": "<p>The <b>colorblind number test</b> is the plate you know from the eye doctor's office: dots forming a digit. Some plates show a number to people with typical vision and a <i>different</i> number to those with a deficiency, which helps distinguish protan from deutan types. Others show nothing to people with a deficiency at all.</p>" },
+        { "h3": "Purple, blue & green-brown color blind tests", "body": "<p>You'll see searches for a <b>purple color blind test</b>, a <b>color blind test blue</b>, or a <b>green brown color blind test</b>. These target specific confusions: purple can look blue if you can't perceive its red component, and green and brown are a classic red-green mix-up. They're useful clues, but any single-color test is still just a screen.</p>" }
+      ]
+    },
+    {
+      "h2": "Are online color blind tests accurate?",
+      "body": [
+        "<p>The honest answer: <b>online color blind tests</b> are good at flagging that something is off, and decent at guessing the type, but they are not a diagnosis. Accuracy depends on your screen, its color profile and brightness, ambient light, and even fatigue. A <b>real color blind test</b> in a clinic uses calibrated plates or instruments like an anomaloscope under controlled lighting, which is why the results carry medical and occupational weight.</p>"
+      ],
+      "subs": [
+        { "h3": "Screening vs. diagnosis", "body": "<p>Think of a <b>color blindness test online</b> as a smoke detector: it tells you to look closer, not exactly what's burning. If a free test suggests a deficiency, book an eye exam to confirm the type and severity — that matters for certain jobs (pilots, electricians, some military roles) and for choosing lenses.</p>" },
+        { "h3": "Best color blind test to take", "body": "<p>The <b>best color blind test</b> for a first check is a reputable Ishihara-based online screen taken carefully, followed by a professional exam if it flags anything. No single online tool is definitively the best; consistency across a couple of well-known tests is what you're really after.</p>" },
+        { "h3": "Quick & simple color blind test", "body": "<p>A <b>quick color blind test</b> of just a few plates is enough to raise a flag, but a <b>simple color blind test</b> can miss milder deficiencies. If colors cause you real trouble but a short test says you're fine, don't stop there — a fuller test or an eye exam is worth it.</p>" }
+      ]
+    },
+    {
+      "h2": "Color blind test for kids & children",
+      "body": [
+        "<p>Kids often can't say that colors look different — they just learn the wrong labels or struggle with color-coded schoolwork. A <b>child color blind test online</b> uses shapes and simple paths instead of numbers so pre-readers can respond. Catching a deficiency early helps teachers and parents adapt, and it prevents years of quiet frustration.</p>"
+      ],
+      "subs": [
+        { "h3": "Online color blind test for kids", "body": "<p>An <b>online color blind test for kids</b> swaps numbers for symbols — circles, stars, squiggly trails to trace — so a young child can point instead of read. Make it a game, do it in daylight, and if it flags anything, mention it to your pediatrician or an eye doctor at the next visit.</p>" },
+        { "h3": "Take a color blind test the right way", "body": "<p>To <b>take a color blind test</b> well: use a decent screen at normal brightness, sit in even, natural-ish light, hold the device about arm's length away, and don't overthink the plates — first impressions count. Run it twice on different days if the result surprises you.</p>" },
+        { "h3": "Red-green color blind test", "body": "<p>Because red-green deficiency is by far the most common, most plates are really a <b>red-green colorblind test</b>. If yours points that way, our <a href='/FAQ/product/glasses-for-red-green-colorblindness/'>red-green color blindness guide</a> explains what correction lenses can and can't do for that type.</p>" }
+      ]
+    }
+  ],
+  "faq": [
+    { "q": "Is an online color blind test accurate?", "a": "It's accurate enough to screen you and suggest a likely type, but not to diagnose. Screen calibration, brightness and lighting all affect the result. Treat a free online test as a strong hint and confirm anything it flags with an eye doctor." },
+    { "q": "What is the Ishihara color blind test?", "a": "It's the classic plate test: a circle of colored dots with a number or shape hidden inside. People with typical color vision read one thing; people with a red-green deficiency read something else or nothing at all. It's the most common screening method, in clinics and online." },
+    { "q": "Where can I take a free color blind test?", "a": "Reputable free color blind tests are available online and use Ishihara-style plates. Take them on a normal-brightness screen in good light, and run the test more than once for a reliable read. Then confirm any flag with a professional exam." },
+    { "q": "Can a color blind test tell me which type I have?", "a": "A good online test can suggest whether you likely have a red-green (deutan or protan) or blue-yellow (tritan) deficiency and roughly how strong it is. Only a clinical exam with calibrated tools can confirm the exact type and severity." },
+    { "q": "Is there a color blind test for kids?", "a": "Yes. Children's color blind tests use shapes, symbols or trails to trace instead of numbers, so pre-readers can respond by pointing. They're a good early screen; mention any flag to your pediatrician or eye doctor." },
+    { "q": "Does passing an online test mean my color vision is perfect?", "a": "Not necessarily. Short or simple online tests can miss milder deficiencies, and an uncalibrated screen can hide problems. If colors genuinely give you trouble, get a fuller test or an eye exam even if a quick screen says you're fine." },
+    { "q": "I failed an online color blind test — what now?", "a": "Don't panic; get it confirmed. Book an eye exam to establish your type and severity, which matters for some jobs and licenses. If it's a red-green deficiency, color-correction lenses may help — we're happy to explain your options for free." }
+  ]
+}
