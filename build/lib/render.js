@@ -326,4 +326,117 @@ ${footer()}
 </html>`;
 }
 
-module.exports = { renderPage, navDropdown, header, footer, slug, byCluster, esc, SITE };
+/* ── Product page (rebuilds old /product/<slug>/<id> URLs) ─────────────────── */
+function renderProduct(p) {
+  const canonical = SITE + p.path;
+  const crumbItems = [
+    { name: "Home", url: SITE + "/" },
+    { name: "Shop", url: SITE + "/shop.html" },
+    { name: p.category, url: SITE + (p.relatedGuide || "/guides.html") },
+    { name: p.name, url: canonical },
+  ];
+  const crumbHtml = `<nav class="crumb" aria-label="Breadcrumb"><div class="container"><ol>
+    ${crumbItems.map((it, i) => i === crumbItems.length - 1
+      ? `<li aria-current="page">${esc(it.name)}</li>`
+      : `<li><a href="${attr(it.url.replace(SITE, "") || "/")}">${esc(it.name)}</a></li>`).join("")}
+  </ol></div></nav>`;
+  const schemas = [
+    { "@context": "https://schema.org", "@type": "BreadcrumbList",
+      itemListElement: crumbItems.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: it.url })) },
+    { "@context": "https://schema.org", "@type": "Product", name: p.name, brand: { "@type": "Brand", name: p.brand },
+      category: p.category, description: p.metaDesc, image: `${SITE}/assets/img/${p.heroImg}`, url: canonical },
+    { "@context": "https://schema.org", "@type": "FAQPage",
+      mainEntity: (p.faq || []).map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: String(f.a).replace(/<[^>]+>/g, "") } })) },
+  ];
+  const features = (p.features || []).map((f) => `<li>${esc(f)}</li>`).join("");
+  const faqHtml = (p.faq && p.faq.length) ? `<section class="container">
+    <div class="sec-head" style="justify-content:center;text-align:center"><div><span class="eyebrow">People also ask</span><h2>Frequently asked questions</h2></div></div>
+    <div class="faq">${p.faq.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div>
+  </section>` : "";
+  const rel = [
+    p.relatedGuide && `<a class="relcard" href="${p.relatedGuide}"><div class="k">${esc(p.brand)} Guide</div><h3>Read the buyer's guide</h3><p>Lenses, fit & how to choose →</p></a>`,
+    p.relatedRx && `<a class="relcard" href="${p.relatedRx}"><div class="k">Prescription</div><h3>Prescription options</h3><p>Get your Rx in this style →</p></a>`,
+    `<a class="relcard" href="/guides.html"><div class="k">All guides</div><h3>Browse all eyewear guides</h3><p>Color vision, Oakley & sport →</p></a>`,
+  ].filter(Boolean).join("");
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(p.metaTitle)}</title>
+<meta name="description" content="${attr(p.metaDesc)}">
+<meta name="keywords" content="${attr([p.primaryKw, p.name, p.brand].join(", "))}">
+<link rel="canonical" href="${attr(canonical)}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="ADS Sports Eyewear">
+<meta property="og:title" content="${attr(p.metaTitle)}">
+<meta property="og:description" content="${attr(p.metaDesc)}">
+<meta property="og:url" content="${attr(canonical)}">
+<meta property="og:image" content="${SITE}/assets/img/${attr(p.heroImg)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+${schemas.map((s) => `<script type="application/ld+json">${jld(s)}</script>`).join("\n")}
+</head>
+<body data-page="${attr(p.path)}" data-keyword="${attr(p.primaryKw)}">
+${header()}
+${crumbHtml}
+<section class="ghero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">${esc(p.brand)} · ${esc(p.category)}</span>
+      <h1>${esc(p.name)}</h1>
+      <p class="lede">${esc(p.metaDesc)}</p>
+      <div class="ghero-cta">
+        <a href="#lead" class="btn btn-solid js-cta" data-arrow="→">Get Pricing &amp; Availability →</a>
+        <a href="#answer" class="btn btn-light">See the details</a>
+      </div>
+    </div>
+    <div class="ghero-media"><img src="/assets/img/${attr(p.heroImg)}" alt="${attr(p.name)}" fetchpriority="high" width="800" height="600"></div>
+  </div>
+</section>
+<section class="container">
+  <div class="prose-wrap">
+    <article class="prose">
+      <div id="answer" style="scroll-margin-top:90px"></div>
+      ${(p.overview || []).join("\n      ")}
+      <h2 id="features">Key features</h2>
+      <ul>${features}</ul>
+      <div class="callout"><b>Prescription available.</b> This style can be made in your prescription — tell us your Rx and we'll confirm the lens options and get you pricing, free.</div>
+    </article>
+    <aside class="rail">
+      <div class="box railcta"><h4>Get pricing &amp; availability</h4><p>Free, no-obligation help — options, fit and Rx.</p><a href="#lead" class="btn btn-solid js-cta" style="width:100%;justify-content:center" data-arrow="">Request info</a></div>
+      <div class="box"><h4>On this page</h4><nav class="toc"><a href="#answer">Overview</a><a href="#features">Key features</a><a href="#lead">Get pricing</a></nav></div>
+    </aside>
+  </div>
+</section>
+${leadForm({ leadHeading: `Get pricing on the ${p.name}`, leadSub: "Tell us where to reach you and we'll follow up with pricing, prescription options and availability. No obligation." })}
+${faqHtml}
+<section class="container">
+  <div class="sec-head"><div><span class="eyebrow">Keep exploring</span><h2>Related</h2></div></div>
+  <div class="relgrid">${rel}</div>
+</section>
+<section class="container">
+  <div class="cta-band">
+    <h2>Want this pair in your prescription?</h2>
+    <p>Get free, no-pressure help with lenses, fit and pricing from an ADS eyewear specialist.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="#lead" class="btn btn-dark js-cta" data-arrow="">Get More Information</a>
+      <a href="/guides.html" class="btn btn-light">Browse all guides</a>
+    </div>
+  </div>
+</section>
+${footer()}
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/guide.js"></script>
+</body>
+</html>`;
+}
+
+module.exports = { renderPage, renderProduct, navDropdown, header, footer, slug, byCluster, esc, SITE };

@@ -5,6 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 const { PAGES, CLUSTERS } = require("./pages.config.js");
+const { PRODUCTS } = require("./products.config.js");
 const R = require("./lib/render.js");
 
 const ROOT = path.join(__dirname, "..");
@@ -35,6 +36,13 @@ for (const page of PAGES) {
   const rec = kwData.find((k) => k.path === page.path);
   report.push({ key: page.key, path: page.path, out: page.out, keywords: rec ? rec.n : 0, vol: rec ? rec.vol : 0 });
   built++;
+}
+
+/* ---- product pages (rebuild old /product/<slug>/<id> URLs) ----------------- */
+let productsBuilt = 0;
+for (const p of PRODUCTS) {
+  writeFileSafe(p.out, R.renderProduct(p));
+  productsBuilt++;
 }
 
 /* ---- /guides.html : human HTML sitemap of all guides ---------------------- */
@@ -111,6 +119,7 @@ function sitemap() {
     const pri = rec && rec.n >= 40 ? "0.9" : rec && rec.n >= 8 ? "0.8" : "0.7";
     urls.push({ loc: R.SITE + p.path, pri, cf: "weekly" });
   }
+  for (const p of PRODUCTS) urls.push({ loc: R.SITE + p.path, pri: "0.7", cf: "weekly" });
   const body = urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${today}</lastmod><changefreq>${u.cf}</changefreq><priority>${u.pri}</priority></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 }
@@ -297,7 +306,7 @@ ${R.footer()}
 }
 fs.writeFileSync(path.join(SITE_DIR, "404.html"), notFoundPage());
 
-console.log(`Built ${built} guide pages, /guides.html, sitemap.xml`);
+console.log(`Built ${built} guide pages, ${productsBuilt} product pages, /guides.html, /404.html, sitemap.xml`);
 if (skipped.length) console.log(`Skipped (no content yet): ${skipped.join(", ")}`);
 console.log("\nPER-PAGE KEYWORD REPORT");
 report.sort((a, b) => b.keywords - a.keywords).forEach((r) => console.log(`  ${String(r.keywords).padStart(3)} kw · ${String(r.vol).padStart(6)} vol → ${r.path}`));
