@@ -9,6 +9,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { execFile } = require("child_process");
+const guard = require("./spam-guard.js");
 
 const PORT = process.env.PORT || 3120;
 const CORE_BASE = process.env.CORE_API_BASE || "https://medigap.plus";
@@ -218,6 +219,8 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "POST" && url === "/api/lead") {
     const d = await readBody(req);
     if (!d) return send(400, { error: "Bad request" });
+    const g = guard.check(req, d, { nameFields: ["firstName", "lastName"] });
+    if (g.spam) { console.log("spam-drop /api/lead", g.ip, g.reasons.join(",")); return send(200, { ok: true }); } // silent drop
     const first = clip(d.firstName, 80).trim(), last = clip(d.lastName, 80).trim(), phone = clip(d.phone, 40).trim();
     const city = clip(d.city, 80).trim(), state = clip(d.state, 30).trim(), zip = clip(d.zip, 12).trim();
     const page = clip(d.page, 300).trim(), keyword = clip(d.keyword, 160).trim(), pageTitle = clip(d.pageTitle, 200).trim();
@@ -236,6 +239,8 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "POST" && url === "/api/partner") {
     const d = await readBody(req);
     if (!d) return send(400, { error: "Bad request" });
+    const g = guard.check(req, d, { nameFields: ["firstName", "lastName"], urlFields: ["businessName", "businesses"] });
+    if (g.spam) { console.log("spam-drop /api/partner", g.ip, g.reasons.join(",")); return send(200, { ok: true }); } // silent drop
     const first = clip(d.firstName, 80).trim(), last = clip(d.lastName, 80).trim(), phone = clip(d.phone, 40).trim(), email = clip(d.email, 160).trim();
     const city = clip(d.city, 80), state = clip(d.state, 30), zip = clip(d.zip, 12);
     const businesses = clip(d.businesses, 300), businessName = clip(d.businessName, 160), pitch = clip(d.pitch, 4000);

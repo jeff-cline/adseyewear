@@ -328,3 +328,6 @@ section{padding:82px 0}
 .fcard .fgo{margin-top:auto;font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:12px;font-weight:600;color:var(--accent)}
 @media(max-width:1000px){.fgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.fgrid{grid-template-columns:1fr}}
+
+/* Honeypot spam field — hidden from humans, tempting to bots */
+.hp-field{position:absolute!important;left:-9999px!important;top:auto;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
