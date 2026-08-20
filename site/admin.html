@@ -3,124 +3,271 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CTA Admin · ADS Sports Eyewear</title>
+<title>God Console · ADS Sports Eyewear</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <style>
-:root{--ink:#0c0e12;--accent:#ea5a1e;--line:#e4e0d7;--paper:#f6f4ef;--muted:#6b7280}
+:root{--ink:#0c0e12;--accent:#ea5a1e;--line:#e4e0d7;--paper:#f6f4ef;--muted:#6b7280;--ok:#137a3a}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Manrope",system-ui,Segoe UI,Arial,sans-serif}
-header{background:var(--ink);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
-header b{font-weight:700;letter-spacing:.04em}
-.wrap{max-width:1040px;margin:0 auto;padding:26px 20px 80px}
-h1{font-size:24px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 22px;font-size:14.5px}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;margin:0 0 16px;box-shadow:0 10px 30px -22px rgba(0,0,0,.4)}
-label{display:block;font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:#444;font-weight:600;margin:0 0 5px}
-input,select{width:100%;font:inherit;font-size:15px;padding:11px 12px;border:1.5px solid var(--line);border-radius:7px;background:var(--paper)}
-input:focus,select:focus{outline:none;border-color:var(--accent);background:#fff}
-button{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:7px;padding:11px 18px;background:var(--accent);color:#fff}
+header{background:var(--ink);color:#fff;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+header b{letter-spacing:.04em}
+.tabs{display:flex;gap:6px}
+.tabs button{background:#1b2028;color:#cfd4da;border:0;padding:8px 16px;border-radius:7px;cursor:pointer;font:inherit;font-size:14px}
+.tabs button.on{background:var(--accent);color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 18px 90px}
+h1{font-size:23px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 20px;font-size:14.5px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 16px;box-shadow:0 10px 30px -22px rgba(0,0,0,.4)}
+label{display:block;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:#444;font-weight:600;margin:0 0 5px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1.5px solid var(--line);border-radius:7px;background:var(--paper)}
+textarea{min-height:90px;resize:vertical;font-size:14px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+button.btn{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:7px;padding:10px 16px;background:var(--accent);color:#fff}
 button.ghost{background:#fff;border:1.5px solid var(--line);color:#333}
-button:disabled{opacity:.5;cursor:default}
+button.btn:disabled{opacity:.5;cursor:default}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.pg{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:14px 0}
-.pg:last-child{border-bottom:0}
-.pgname{font-weight:600}.pgpath{font-size:12.5px;color:var(--muted);word-break:break-all}
-.state{font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px}
-.state.lead{background:#eef2f5;color:#33506b}.state.vendor{background:#fdecdd;color:#b3480f}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.fld{margin:0 0 13px}
+.pg{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:11px 0}
+.pg:last-child{border-bottom:0}.pg .nm{font-weight:600;font-size:15px}.pg .pt{font-size:12px;color:var(--muted);word-break:break-all}
+.state{font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;white-space:nowrap}
+.state.def{background:#eef2f5;color:#33506b}.state.custom{background:#fdecdd;color:#b3480f}
 .msg{padding:11px 14px;border-radius:8px;font-weight:600;margin:12px 0;display:none}
-.msg.ok{display:block;background:#e8f6ec;color:#137a3a}.msg.err{display:block;background:#fdecea;color:#b3261e}
-dialog{border:0;border-radius:14px;padding:0;max-width:560px;width:92%;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
-dialog .dc{padding:24px}dialog h3{margin:0 0 4px}dialog .fld{margin:0 0 14px}
-.hint{font-size:13px;color:var(--muted)}.center{text-align:center}
-#login{max-width:400px;margin:8vh auto}
+.msg.ok{display:block;background:#e8f6ec;color:var(--ok)}.msg.err{display:block;background:#fdecea;color:#b3261e}
+.bulkbar{position:sticky;bottom:0;background:var(--ink);color:#fff;border-radius:10px;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.bulkbar b{color:var(--accent)}
+dialog{border:0;border-radius:14px;padding:0;max-width:600px;width:94%;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+dialog .dc{padding:24px}dialog h3{margin:0 0 12px}
+.grouphd{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--accent);margin:16px 0 4px;font-weight:700}
+#login{max-width:400px;margin:8vh auto}.hint{font-size:12.5px;color:var(--muted);margin-top:5px}
+.listhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+small.src{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:2px 8px}
 </style>
 </head>
 <body>
-<header><b>ADS · CTA Admin</b><button class="ghost" id="logout" style="display:none">Log out</button></header>
+<header>
+  <b>ADS · God Console</b>
+  <div class="tabs" id="tabs" style="display:none">
+    <button data-tab="cta" class="on">CTAs</button>
+    <button data-tab="products">Products</button>
+    <button data-tab="content">Content</button>
+    <button class="ghost" id="logout" style="margin-left:8px">Log out</button>
+  </div>
+</header>
 
 <div id="login" class="card">
-  <h1>God login</h1>
-  <p class="sub">Enter the admin password to manage page CTAs.</p>
-  <div class="fld"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password"></div>
+  <h1>God login</h1><p class="sub">Enter the admin password.</p>
+  <div class="fld"><input id="pw" type="password" autocomplete="current-password" placeholder="Password"></div>
   <div id="lmsg" class="msg"></div>
-  <button id="loginBtn" style="width:100%">Sign in</button>
+  <button class="btn" id="loginBtn" style="width:100%">Sign in</button>
 </div>
 
 <div id="app" class="wrap" style="display:none">
-  <h1>Page CTAs</h1>
-  <p class="sub">Every guide page's buttons default to the free <b>info-request lead form</b>. Once a page ranks, point its CTAs at a vendor or <b>el.ag</b> affiliate link here — it takes effect <b>instantly</b>, no rebuild. Clear it to send visitors back to the lead form.</p>
   <div id="gmsg" class="msg"></div>
-  <div class="card" id="pages"></div>
+
+  <!-- CTA TAB -->
+  <section id="tab-cta">
+    <h1>Call-to-action links</h1>
+    <p class="sub">Every page's buttons follow the <b>global default</b> unless you override a page. Point CTAs at an affiliate link, an order page, or an email — for one page, several at once, or everything.</p>
+    <div class="card">
+      <div class="listhd"><label style="margin:0">Global default CTA (applies everywhere not overridden)</label></div>
+      <div id="defBox"></div>
+    </div>
+    <div class="card">
+      <div class="listhd"><label style="margin:0">Pages &amp; products</label><label style="margin:0;font-weight:500;text-transform:none"><input type="checkbox" id="selAll" style="width:auto"> select all</label></div>
+      <div id="ctaList"></div>
+      <div class="bulkbar" id="bulkbar" style="display:none">
+        <span><b id="selCount">0</b> selected</span>
+        <button class="btn" id="bulkSet">Set CTA for selected…</button>
+        <button class="ghost btn" id="bulkClear">Reset selected to default</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS TAB -->
+  <section id="tab-products" style="display:none">
+    <div class="listhd"><h1 style="margin:0">Products</h1><button class="btn" id="addProd">+ Add product</button></div>
+    <p class="sub">Add products as holding pages you can flesh out later. Each gets its own SEO URL, lead form, and a CTA you control on the CTAs tab.</p>
+    <div class="card"><div id="prodList"></div></div>
+  </section>
+
+  <!-- CONTENT TAB -->
+  <section id="tab-content" style="display:none">
+    <h1>Edit page content</h1>
+    <p class="sub">Edit the holding copy on any guide page. Basic fields are plain text; sections &amp; FAQ are editable as JSON. Saving republishes the page.</p>
+    <div class="card">
+      <div class="fld"><label>Choose a page</label><select id="contentPick"></select></div>
+      <div id="contentEditor" style="display:none">
+        <div class="fld"><label>Meta title</label><input id="c_metaTitle"></div>
+        <div class="fld"><label>Meta description</label><textarea id="c_metaDesc" style="min-height:60px"></textarea></div>
+        <div class="row"><div class="fld"><label>H1 headline</label><input id="c_h1"></div><div class="fld"><label>Hero subtext</label><input id="c_heroSub"></div></div>
+        <div class="fld"><label>Quick answer (HTML ok)</label><textarea id="c_quickAnswer" style="min-height:60px"></textarea></div>
+        <div class="fld"><label>Intro paragraphs (blank line between paragraphs)</label><textarea id="c_intro" style="min-height:120px"></textarea></div>
+        <div class="row"><div class="fld"><label>CTA heading</label><input id="c_ctaHeading"></div><div class="fld"><label>CTA subtext</label><input id="c_ctaSub"></div></div>
+        <details><summary style="cursor:pointer;font-weight:600;margin:6px 0">Advanced — sections &amp; FAQ (JSON)</summary>
+          <div class="fld"><label>sections</label><textarea id="c_sections" style="min-height:160px;font-family:monospace"></textarea></div>
+          <div class="fld"><label>faq</label><textarea id="c_faq" style="min-height:120px;font-family:monospace"></textarea></div>
+        </details>
+        <button class="btn" id="saveContent">Save &amp; publish</button>
+        <span class="hint" id="contentBusy"></span>
+      </div>
+    </div>
+  </section>
 </div>
 
-<dialog id="dlg"><div class="dc">
-  <h3 id="dlgTitle">Edit CTA</h3>
-  <p class="pgpath" id="dlgPath"></p>
-  <div class="fld"><label>Destination URL (vendor or el.ag link)</label><input id="dHref" placeholder="https://el.ag/xxxxx"></div>
-  <div class="row"><div class="fld"><label>Button label</label><input id="dLabel" placeholder="Shop this / Get offer"></div>
-  <div class="fld"><label>Open in new tab?</label><select id="dNewtab"><option value="yes">Yes</option><option value="no">No</option></select></div></div>
-  <div class="fld"><label>Ribbon note (optional, shown above the form)</label><input id="dNote" placeholder="Now available from our partner →"></div>
-  <p class="hint">Leave URL blank &amp; save to reset this page back to the lead form.</p>
-  <div style="display:flex;gap:10px;margin-top:16px">
-    <button id="dSave" style="flex:1">Save</button>
-    <button id="dClear" class="ghost">Reset to lead form</button>
-    <button id="dCancel" class="ghost">Cancel</button>
-  </div>
+<!-- CTA dialog -->
+<dialog id="ctaDlg"><div class="dc">
+  <h3 id="ctaDlgTitle">Set CTA</h3><p class="pt" id="ctaDlgSub"></p>
+  <div class="row"><div class="fld"><label>Type</label><select id="d_type"><option value="affiliate">Affiliate / third-party link</option><option value="order">Order page</option><option value="email">Email</option></select></div>
+  <div class="fld"><label>Open in new tab?</label><select id="d_newtab"><option value="yes">Yes</option><option value="no">No</option></select></div></div>
+  <div class="fld"><label id="d_hrefLabel">Destination URL</label><input id="d_href" placeholder="https://el.ag/xxxx  (or an email for the Email type)"></div>
+  <div class="row"><div class="fld"><label>Button label (optional)</label><input id="d_label" placeholder="Shop / Get offer / Order"></div>
+  <div class="fld"><label>Ribbon note (optional)</label><input id="d_note" placeholder="Now available →"></div></div>
+  <div style="display:flex;gap:10px;margin-top:8px"><button class="btn" id="ctaSave" style="flex:1">Save</button><button class="ghost btn" id="ctaCancel">Cancel</button></div>
+</div></dialog>
+
+<!-- Product dialog -->
+<dialog id="prodDlg"><div class="dc">
+  <h3 id="prodDlgTitle">Add product</h3>
+  <div class="row"><div class="fld"><label>Product name *</label><input id="p_name"></div><div class="fld"><label>Brand</label><input id="p_brand" placeholder="Oakley / Wiley X / ADS"></div></div>
+  <div class="row"><div class="fld"><label>Category</label><input id="p_category" placeholder="Performance Sunglasses"></div><div class="fld"><label>Primary keyword</label><input id="p_kw" placeholder="oakley flak 2.0"></div></div>
+  <div class="fld"><label>Hero image</label><select id="p_hero"></select></div>
+  <div class="fld"><label>Description (holding copy — blank line between paragraphs)</label><textarea id="p_desc" placeholder="A short holding description; edit later."></textarea></div>
+  <div class="fld"><label>Key features (one per line, optional)</label><textarea id="p_features" style="min-height:70px"></textarea></div>
+  <div class="fld"><label>URL ID (optional — set to match an old URL, e.g. 3750)</label><input id="p_customid" placeholder="leave blank to auto-generate"><span class="hint">URL becomes /product/&lt;name&gt;/&lt;id&gt;. Can't be changed after saving.</span></div>
+  <input type="hidden" id="p_id">
+  <div style="display:flex;gap:10px;margin-top:8px"><button class="btn" id="prodSave" style="flex:1">Save &amp; publish</button><button class="ghost btn" id="prodDelete" style="display:none">Delete</button><button class="ghost btn" id="prodCancel">Cancel</button></div>
+  <span class="hint" id="prodBusy"></span>
 </div></dialog>
 
 <script>
-const PAGES = [{"path":"/FAQ/product/color-blind-glasses/","nav":"Color Blind Glasses","cluster":"Color Vision Guides"},{"path":"/FAQ/product/color-blind-test/","nav":"Color Blind Test","cluster":"Color Vision Guides"},{"path":"/FAQ/product/ray-ban-color-blind-glasses/","nav":"Ray-Ban Color Blind Glasses","cluster":"Color Vision Guides"},{"path":"/FAQ/product/glasses-for-blue-green-colorblindness/","nav":"Blue-Green Colorblindness","cluster":"Color Vision Guides"},{"path":"/FAQ/product/glasses-for-red-green-colorblindness/","nav":"Red-Green Colorblindness","cluster":"Color Vision Guides"},{"path":"/FAQ/product/oakley-color-blind-glasses/","nav":"Oakley Color Blind Glasses","cluster":"Color Vision Guides"},{"path":"/FAQ/product/lavender-lens-color-blind-glasses/","nav":"Lavender Lens Glasses","cluster":"Color Vision Guides"},{"path":"/FAQ/product/red-lens-color-blind-glasses/","nav":"Red Lens Glasses","cluster":"Color Vision Guides"},{"path":"/FAQ/product/color-blind-ski-goggles-inserts/","nav":"Color Blind Ski Goggles","cluster":"Color Vision Guides"},{"path":"/Oakley-Sunglasses-Buyers-Guide","nav":"Oakley Sunglasses Buyer's Guide","cluster":"Oakley & Lens Guides"},{"path":"/Oakley-Lens-Colors","nav":"Oakley Lens Colors","cluster":"Oakley & Lens Guides"},{"path":"/Selecting-a-Lens-Color","nav":"Selecting a Lens Color","cluster":"Oakley & Lens Guides"},{"path":"/Sunglasses/2/Prescription/4/Oakley/17","nav":"Oakley Prescription Sunglasses","cluster":"Oakley & Lens Guides"},{"path":"/Ski-Goggles/12/Prescription-Ski-Goggles/33/Oakley-Ski-Goggles/127","nav":"Oakley Prescription Ski Goggles","cluster":"Oakley & Lens Guides"},{"path":"/Shop-by-Activity/5/Prescription/14/Youth-Sport/62","nav":"Youth Sport Glasses","cluster":"Prescription Sport Eyewear"},{"path":"/Shop-by-Activity/5/Prescription/14/Tactical-Shooting/65","nav":"Tactical & Shooting Glasses","cluster":"Prescription Sport Eyewear"},{"path":"/Shop-by-Activity/5/Prescription/14/Motorcycle-Sunglasses/69","nav":"Motorcycle Sunglasses","cluster":"Prescription Sport Eyewear"},{"path":"/Shop-by-Activity/5/Prescription/14/Baseball-Softball/59","nav":"Baseball & Softball Glasses","cluster":"Prescription Sport Eyewear"},{"path":"/Shop-by-Activity/5/Prescription/14/Cycling/66","nav":"Prescription Cycling Glasses","cluster":"Prescription Sport Eyewear"},{"path":"/Sunglasses/2/Prescription/4/Panoptx-7Eye/8","nav":"Panoptx 7Eye Sunglasses","cluster":"Prescription Sport Eyewear"},{"path":"/Sunglasses/2/Prescription/4/Wiley-X/21","nav":"Wiley X Prescription","cluster":"Prescription Sport Eyewear"},{"path":"/Lenticular-Lenses-for-High-Prescriptions","nav":"Lenticular Lenses (High Rx)","cluster":"Prescription Sport Eyewear"},{"path":"/Prescription-Ski-Goggle-Reviews-and-FAQ","nav":"Prescription Ski Goggle Reviews","cluster":"Prescription Sport Eyewear"},{"path":"/FAQ/ansi-z87-1-safety-glasses-and-rx-prescription-lenses/","nav":"ANSI Z87.1 Safety Glasses","cluster":"Prescription Sport Eyewear"}];
-const S = { token: sessionStorage.getItem("adsAdminTok") || "", cfg: {} };
-const $ = (id) => document.getElementById(id);
-function msg(el, kind, txt){ el.className = "msg " + kind; el.textContent = txt; }
-async function api(path, opts){ opts = opts || {}; opts.headers = Object.assign({ "content-type":"application/json" }, opts.headers||{}); if (S.token) opts.headers.authorization = "Bearer " + S.token; const r = await fetch(path, opts); const j = await r.json().catch(()=>({})); return { ok:r.ok, status:r.status, j }; }
+var IMAGES = ["sunglasses-hero.jpg","hero-sport.jpg","aviator.jpg","man-portrait.jpg","woman-shades.jpg","road-cycling.jpg","cyclist.jpg","golf.jpg","surf.jpg","mountain.jpg","beach-life.jpg","product-1.jpg","product-2.jpg","product-3.jpg","guides/ski-goggles.jpg","guides/eyeglasses-lens.jpg","guides/kids-sport.jpg","guides/motorcycle-rider.jpg","guides/color-spectrum.jpg","guides/cycling-sport.jpg"];
+var S={token:sessionStorage.getItem("adsAdminTok")||"",cta:{},pages:[],products:[],sel:new Set(),bulkMode:false,editKey:""};
+var $=function(id){return document.getElementById(id);};
+function msg(el,k,t){el.className="msg "+k;el.textContent=t;if(k==="ok")setTimeout(function(){el.className="msg";},3500);}
+function api(p,o){o=o||{};o.headers=Object.assign({"content-type":"application/json"},o.headers||{});if(S.token)o.headers.authorization="Bearer "+S.token;return fetch(p,o).then(function(r){return r.json().catch(function(){return{};}).then(function(j){return{ok:r.ok,status:r.status,j:j};});});}
 
-async function doLogin(){
-  const pw = $("pw").value.trim(); if(!pw) return;
-  $("loginBtn").disabled = true;
-  const r = await api("/api/admin/login", { method:"POST", body: JSON.stringify({ password: pw }) });
-  $("loginBtn").disabled = false;
-  if (r.ok && r.j.token){ S.token = r.j.token; sessionStorage.setItem("adsAdminTok", S.token); showApp(); }
-  else msg($("lmsg"), "err", (r.j && r.j.error) || "Login failed.");
+/* ---- auth ---- */
+function doLogin(){var pw=$("pw").value.trim();if(!pw)return;$("loginBtn").disabled=true;
+  api("/api/admin/login",{method:"POST",body:JSON.stringify({password:pw})}).then(function(r){$("loginBtn").disabled=false;
+    if(r.ok&&r.j.token){S.token=r.j.token;sessionStorage.setItem("adsAdminTok",S.token);boot();}else msg($("lmsg"),"err",(r.j&&r.j.error)||"Login failed.");});}
+function logout(){S.token="";sessionStorage.removeItem("adsAdminTok");location.reload();}
+function boot(){
+  api("/api/admin/cta").then(function(r){
+    if(!r.ok){logout();return;}
+    S.cta=r.j.config||{};S.pages=r.j.pages||[];S.products=r.j.products||[];
+    $("login").style.display="none";$("app").style.display="block";$("tabs").style.display="flex";
+    fillImages();renderDefault();renderCtaList();renderProducts();renderContentPicker();
+  });
 }
-async function showApp(){
-  const r = await api("/api/admin/cta");
-  if (!r.ok){ logout(); return; }
-  S.cfg = r.j.config || {};
-  $("login").style.display="none"; $("app").style.display="block"; $("logout").style.display="inline-block";
-  render();
+
+/* ---- tabs ---- */
+Array.prototype.forEach.call(document.querySelectorAll("#tabs button[data-tab]"),function(b){b.onclick=function(){
+  Array.prototype.forEach.call(document.querySelectorAll("#tabs button[data-tab]"),function(x){x.classList.remove("on");});
+  b.classList.add("on");["cta","products","content"].forEach(function(t){$("tab-"+t).style.display=(t===b.dataset.tab)?"block":"none";});
+};});
+
+/* ---- CTA: global default ---- */
+function renderDefault(){var d=S.cta.__default__||{};
+  $("defBox").innerHTML='<div class="row3"><div class="fld"><label>Type</label><select id="dd_type"><option value="affiliate">Affiliate link</option><option value="order">Order page</option><option value="email">Email</option></select></div>'+
+  '<div class="fld"><label>Button label</label><input id="dd_label"></div><div class="fld"><label>New tab</label><select id="dd_newtab"><option value="yes">Yes</option><option value="no">No</option></select></div></div>'+
+  '<div class="fld"><label>Destination</label><input id="dd_href"></div><button class="btn" id="dd_save">Save default</button> <span class="hint">Currently: '+(d.href?escapeHtml(d.href):"— (falls back to the on-page lead form)")+'</span>';
+  $("dd_type").value=d.type||"affiliate";$("dd_label").value=d.label||"";$("dd_newtab").value=(d.newtab===false)?"no":"yes";$("dd_href").value=d.href||"";
+  $("dd_save").onclick=function(){saveCta(["__default__"],{type:$("dd_type").value,label:$("dd_label").value,newtab:$("dd_newtab").value==="yes",href:$("dd_href").value},false);};
 }
-function render(){
-  $("pages").innerHTML = PAGES.map(function(p){
-    const c = S.cfg[p.path];
-    const on = c && c.enabled && c.href;
-    return '<div class="pg"><div><div class="pgname">'+p.nav+'</div><div class="pgpath">'+p.path+(on?' → '+c.href:'')+'</div></div>'+
-      '<div style="display:flex;align-items:center;gap:12px">'+
-      '<span class="state '+(on?'vendor':'lead')+'">'+(on?'VENDOR / AFFILIATE':'LEAD FORM')+'</span>'+
-      '<button class="ghost" data-p="'+encodeURIComponent(p.path)+'">Edit</button></div></div>';
-  }).join("");
-  document.querySelectorAll('#pages button[data-p]').forEach(function(b){ b.onclick=function(){ openDlg(decodeURIComponent(b.getAttribute("data-p"))); }; });
+function escapeHtml(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+
+/* ---- CTA: list of pages+products ---- */
+function ctaState(path){var c=S.cta[path];return (c&&c.enabled&&c.href)?{on:true,href:c.href}:{on:false};}
+function renderCtaList(){
+  var items=S.pages.concat(S.products);var groups={};items.forEach(function(it){(groups[it.cluster]=groups[it.cluster]||[]).push(it);});
+  var html="";Object.keys(groups).forEach(function(g){
+    html+='<div class="grouphd">'+escapeHtml(g)+'</div>';
+    groups[g].forEach(function(it){var st=ctaState(it.path);
+      html+='<div class="pg"><input type="checkbox" style="width:auto" data-sel="'+escapeHtml(it.path)+'"'+(S.sel.has(it.path)?" checked":"")+'>'+
+      '<div style="flex:1"><div class="nm">'+escapeHtml(it.nav)+' <small class="src">'+it.kind+'</small></div><div class="pt">'+escapeHtml(it.path)+(st.on?' → '+escapeHtml(st.href):'')+'</div></div>'+
+      '<span class="state '+(st.on?"custom":"def")+'">'+(st.on?"OVERRIDE":"DEFAULT")+'</span>'+
+      '<button class="ghost btn" data-edit="'+escapeHtml(it.path)+'" data-nav="'+escapeHtml(it.nav)+'">Edit</button></div>';
+    });
+  });
+  $("ctaList").innerHTML=html;
+  Array.prototype.forEach.call($("ctaList").querySelectorAll("input[data-sel]"),function(cb){cb.onchange=function(){var p=cb.getAttribute("data-sel");if(cb.checked)S.sel.add(p);else S.sel.delete(p);updateBulk();};});
+  Array.prototype.forEach.call($("ctaList").querySelectorAll("button[data-edit]"),function(b){b.onclick=function(){openCta([b.getAttribute("data-edit")],b.getAttribute("data-nav"));};});
+  updateBulk();
 }
-let curPath = "";
-function openDlg(pth){
-  curPath = pth; const c = S.cfg[pth] || {};
-  const p = PAGES.find(function(x){return x.path===pth;});
-  $("dlgTitle").textContent = p ? p.nav : "Edit CTA"; $("dlgPath").textContent = pth;
-  $("dHref").value = c.href||""; $("dLabel").value = c.label||""; $("dNote").value = c.note||"";
-  $("dNewtab").value = (c.newtab===false)?"no":"yes";
-  $("dlg").showModal();
+function updateBulk(){$("selCount").textContent=S.sel.size;$("bulkbar").style.display=S.sel.size?"flex":"none";}
+$("selAll").onchange=function(){var on=$("selAll").checked;S.sel=new Set();if(on)S.pages.concat(S.products).forEach(function(it){S.sel.add(it.path);});renderCtaList();};
+$("bulkSet").onclick=function(){openCta(Array.from(S.sel),S.sel.size+" selected pages");};
+$("bulkClear").onclick=function(){saveCta(Array.from(S.sel),{clear:true},true);};
+
+/* ---- CTA dialog ---- */
+var ctaTargets=[];
+function openCta(targets,title){ctaTargets=targets;$("ctaDlgTitle").textContent="Set CTA — "+title;$("ctaDlgSub").textContent=targets.length>1?targets.length+" items":targets[0];
+  var c=(targets.length===1&&S.cta[targets[0]])?S.cta[targets[0]]:{};
+  $("d_type").value=c.type||"affiliate";$("d_href").value=(c.href||"").replace(/^mailto:/,"");$("d_label").value=c.label||"";$("d_note").value=c.note||"";$("d_newtab").value=(c.newtab===false)?"no":"yes";
+  $("ctaDlg").showModal();}
+$("d_type").onchange=function(){$("d_hrefLabel").textContent=$("d_type").value==="email"?"Email address":"Destination URL";};
+$("ctaCancel").onclick=function(){$("ctaDlg").close();};
+$("ctaSave").onclick=function(){saveCta(ctaTargets,{type:$("d_type").value,href:$("d_href").value,label:$("d_label").value,note:$("d_note").value,newtab:$("d_newtab").value==="yes"},false);$("ctaDlg").close();};
+function saveCta(targets,cfg,clear){var body=Object.assign({pages:targets},cfg);if(clear)body.clear=true;
+  api("/api/admin/cta",{method:"POST",body:JSON.stringify(body)}).then(function(r){if(r.ok){S.cta=r.j.config||{};S.sel=new Set();renderDefault();renderCtaList();msg($("gmsg"),"ok","CTA saved — live now.");}else msg($("gmsg"),"err",(r.j&&r.j.error)||"Save failed.");});}
+
+/* ---- Products ---- */
+function fillImages(){var opts=IMAGES.map(function(i){return '<option value="'+i+'">'+i+'</option>';}).join("");$("p_hero").innerHTML=opts;}
+function renderProducts(){
+  $("prodList").innerHTML=S.products.map(function(p){
+    return '<div class="pg"><div style="flex:1"><div class="nm">'+escapeHtml(p.name)+' <small class="src">'+(p.source||"seed")+'</small></div><div class="pt">'+escapeHtml(p.path||"")+' · '+escapeHtml(p.category||"")+'</div></div>'+
+    '<a class="ghost btn" href="'+escapeHtml(p.path||"#")+'" target="_blank" style="text-decoration:none">View</a>'+
+    '<button class="ghost btn" data-ep="'+escapeHtml(p.id)+'">Edit</button></div>';
+  }).join("")||'<p class="hint">No products yet.</p>';
+  Array.prototype.forEach.call($("prodList").querySelectorAll("button[data-ep]"),function(b){b.onclick=function(){openProd(b.getAttribute("data-ep"));};});
 }
-async function saveDlg(clear){
-  const body = { page: curPath };
-  if (clear){ body.clear = true; }
-  else { body.href=$("dHref").value.trim(); body.label=$("dLabel").value.trim(); body.note=$("dNote").value.trim(); body.newtab=$("dNewtab").value==="yes"; body.enabled = !!body.href; }
-  const r = await api("/api/admin/cta", { method:"POST", body: JSON.stringify(body) });
-  if (r.ok){ S.cfg = r.j.config || {}; $("dlg").close(); render(); msg($("gmsg"),"ok", clear||!body.href ? "Reset to the lead form." : "CTA saved — live now."); setTimeout(function(){$("gmsg").className="msg";},3000); }
-  else msg($("gmsg"),"err",(r.j&&r.j.error)||"Save failed.");
+$("addProd").onclick=function(){openProd(null);};
+function openProd(id){var p=id?S.products.filter(function(x){return String(x.id)===String(id);})[0]||{}:{};
+  $("prodDlgTitle").textContent=id?"Edit product":"Add product";
+  $("p_id").value=p.id||"";$("p_name").value=p.name||"";$("p_brand").value=p.brand||"";$("p_category").value=p.category||"";$("p_kw").value=p.primaryKw||"";
+  $("p_hero").value=p.heroImg||"sunglasses-hero.jpg";$("p_desc").value=p.description||"";
+  $("p_features").value=(p.features||[]).join("\n");
+  $("p_customid").value="";$("p_customid").parentNode.style.display=id?"none":"block";
+  $("prodDelete").style.display=id?"inline-block":"none";$("prodBusy").textContent="";
+  $("prodDlg").showModal();}
+$("prodCancel").onclick=function(){$("prodDlg").close();};
+$("prodSave").onclick=function(){
+  var name=$("p_name").value.trim();if(!name){$("prodBusy").textContent="Name is required.";return;}
+  $("prodSave").disabled=true;$("prodBusy").textContent="Publishing…";
+  var idVal=$("p_id").value.trim()||$("p_customid").value.trim().replace(/[^A-Za-z0-9_-]/g,"");
+  var body={id:idVal,name:name,brand:$("p_brand").value.trim(),category:$("p_category").value.trim(),primaryKw:$("p_kw").value.trim(),heroImg:$("p_hero").value,description:$("p_desc").value,features:$("p_features").value};
+  api("/api/admin/products",{method:"POST",body:JSON.stringify(body)}).then(function(r){$("prodSave").disabled=false;
+    if(r.ok){$("prodDlg").close();reloadLists();msg($("gmsg"),"ok","Product published.");}else{$("prodBusy").textContent=(r.j&&r.j.error)||"Save failed.";}});};
+$("prodDelete").onclick=function(){if(!confirm("Delete this product page?"))return;
+  api("/api/admin/products/delete",{method:"POST",body:JSON.stringify({id:$("p_id").value.trim()})}).then(function(r){if(r.ok){$("prodDlg").close();reloadLists();msg($("gmsg"),"ok","Product deleted.");}});};
+function reloadLists(){api("/api/admin/cta").then(function(r){if(r.ok){S.cta=r.j.config||{};S.pages=r.j.pages||[];S.products=r.j.products||[];renderCtaList();renderProducts();renderContentPicker();}});}
+
+/* ---- Content editor ---- */
+function renderContentPicker(){
+  var guides=S.pages.filter(function(p){return p.kind==="guide";});
+  $("contentPick").innerHTML='<option value="">— choose a page —</option>'+guides.map(function(g){return '<option value="'+g.key+'">'+escapeHtml(g.nav)+'</option>';}).join("");
 }
-function logout(){ S.token=""; sessionStorage.removeItem("adsAdminTok"); $("app").style.display="none"; $("logout").style.display="none"; $("login").style.display="block"; }
-$("loginBtn").onclick = doLogin; $("pw").addEventListener("keydown",function(e){ if(e.key==="Enter") doLogin(); });
-$("logout").onclick = logout; $("dSave").onclick=function(){saveDlg(false);}; $("dClear").onclick=function(){saveDlg(true);}; $("dCancel").onclick=function(){$("dlg").close();};
-if (S.token) showApp();
+$("contentPick").onchange=function(){var key=$("contentPick").value;if(!key){$("contentEditor").style.display="none";return;}
+  api("/api/admin/content?key="+encodeURIComponent(key)).then(function(r){if(!r.ok){msg($("gmsg"),"err","Could not load.");return;}
+    var c=r.j.content||{};S.editKey=key;
+    $("c_metaTitle").value=c.metaTitle||"";$("c_metaDesc").value=c.metaDesc||"";$("c_h1").value=c.h1||"";$("c_heroSub").value=c.heroSub||"";
+    $("c_quickAnswer").value=c.quickAnswer||"";$("c_intro").value=(c.intro||[]).join("\n\n");$("c_ctaHeading").value=c.ctaHeading||"";$("c_ctaSub").value=c.ctaSub||"";
+    $("c_sections").value=JSON.stringify(c.sections||[],null,2);$("c_faq").value=JSON.stringify(c.faq||[],null,2);
+    S._content=c;$("contentEditor").style.display="block";$("contentBusy").textContent="";
+  });};
+$("saveContent").onclick=function(){
+  var c=Object.assign({},S._content);
+  c.metaTitle=$("c_metaTitle").value;c.metaDesc=$("c_metaDesc").value;c.h1=$("c_h1").value;c.heroSub=$("c_heroSub").value;
+  c.quickAnswer=$("c_quickAnswer").value;c.ctaHeading=$("c_ctaHeading").value;c.ctaSub=$("c_ctaSub").value;
+  c.intro=$("c_intro").value.split(/\n\s*\n/).map(function(p){p=p.trim();return p?(/^</.test(p)?p:"<p>"+p+"</p>"):"";}).filter(Boolean);
+  try{c.sections=JSON.parse($("c_sections").value);}catch(e){msg($("gmsg"),"err","Sections JSON invalid: "+e.message);return;}
+  try{c.faq=JSON.parse($("c_faq").value);}catch(e){msg($("gmsg"),"err","FAQ JSON invalid: "+e.message);return;}
+  $("saveContent").disabled=true;$("contentBusy").textContent="Publishing…";
+  api("/api/admin/content",{method:"POST",body:JSON.stringify({key:S.editKey,content:c})}).then(function(r){$("saveContent").disabled=false;$("contentBusy").textContent="";
+    if(r.ok){msg($("gmsg"),"ok","Saved & published.");}else msg($("gmsg"),"err",(r.j&&r.j.error)||"Save failed.");});};
+
+$("loginBtn").onclick=doLogin;$("pw").addEventListener("keydown",function(e){if(e.key==="Enter")doLogin();});$("logout").onclick=logout;
+if(S.token)boot();
 </script>
 </body>
 </html>

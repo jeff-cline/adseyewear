@@ -326,8 +326,33 @@ ${footer()}
 </html>`;
 }
 
+/* Compute a product URL path/out from category+name+id (for God-added products). */
+function productPath(p) {
+  if (p.path && p.out) return p;
+  const nameSlug = String(p.name || "product").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const path = p.path || `/product/${nameSlug}/${p.id}`;
+  const out = p.out || `product/${nameSlug}/${p.id}.html`;
+  return Object.assign({}, p, { path, out });
+}
+
 /* ── Product page (rebuilds old /product/<slug>/<id> URLs) ─────────────────── */
-function renderProduct(p) {
+function renderProduct(raw) {
+  // Normalize: fill holding-content defaults for God-added / partial products.
+  const p = productPath(raw);
+  p.brand = p.brand || "ADS";
+  p.category = p.category || "Sport Eyewear";
+  p.heroImg = p.heroImg || "sunglasses-hero.jpg";
+  p.primaryKw = p.primaryKw || p.name;
+  if (!p.overview || !p.overview.length) {
+    const desc = (p.description || "").trim();
+    p.overview = desc
+      ? desc.split(/\n\s*\n/).map((para, i) => `<p${i === 0 ? " class='lead'" : ""}>${esc(para).replace(/\n/g, "<br>")}</p>`)
+      : [`<p class='lead'>The <b>${esc(p.name)}</b> is part of our ${esc(p.category).toLowerCase()} lineup. This is a holding page — full details are on the way. In the meantime, request pricing and availability and we'll help you right away.</p>`];
+  }
+  p.features = p.features || [];
+  p.faq = p.faq || [];
+  p.metaTitle = p.metaTitle || `${p.name} — ${p.brand} | ADS Sports Eyewear`;
+  p.metaDesc = p.metaDesc || (p.description ? String(p.description).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim().slice(0, 155) : `${p.name} from ${p.brand} at ADS Sports Eyewear — get pricing, prescription options and availability, free.`);
   const canonical = SITE + p.path;
   const crumbItems = [
     { name: "Home", url: SITE + "/" },
@@ -406,13 +431,12 @@ ${crumbHtml}
     <article class="prose">
       <div id="answer" style="scroll-margin-top:90px"></div>
       ${(p.overview || []).join("\n      ")}
-      <h2 id="features">Key features</h2>
-      <ul>${features}</ul>
+      ${features ? `<h2 id="features">Key features</h2>\n      <ul>${features}</ul>` : ""}
       <div class="callout"><b>Prescription available.</b> This style can be made in your prescription — tell us your Rx and we'll confirm the lens options and get you pricing, free.</div>
     </article>
     <aside class="rail">
       <div class="box railcta"><h4>Get pricing &amp; availability</h4><p>Free, no-obligation help — options, fit and Rx.</p><a href="#lead" class="btn btn-solid js-cta" style="width:100%;justify-content:center" data-arrow="">Request info</a></div>
-      <div class="box"><h4>On this page</h4><nav class="toc"><a href="#answer">Overview</a><a href="#features">Key features</a><a href="#lead">Get pricing</a></nav></div>
+      <div class="box"><h4>On this page</h4><nav class="toc"><a href="#answer">Overview</a>${features ? '<a href="#features">Key features</a>' : ""}<a href="#lead">Get pricing</a></nav></div>
     </aside>
   </div>
 </section>
