@@ -90,6 +90,7 @@ for (const f of LEGACY) {
   if (!fs.existsSync(fp)) continue;
   let html = fs.readFileSync(fp, "utf8");
   const before = html;
+  html = html.replace(/\/assets\/css\/style\.css(\?v=\d+)?"/g, '/assets/css/style.css?v=3"');
   html = addNavGuides(html);
   html = addDrawerGuides(html);
   html = addFooterGuides(html);

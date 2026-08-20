@@ -73,7 +73,7 @@ function guidesIndex() {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
 </head>
 <body data-page="/guides.html">
 ${R.header()}
@@ -247,6 +247,55 @@ if (S.token) showApp();
 </html>`;
 }
 fs.writeFileSync(path.join(SITE_DIR, "admin.html"), adminPanel());
+
+/* ---- 404.html : branded not-found that recovers dead product URLs ---------- */
+function notFoundPage() {
+  const groups = R.byCluster();
+  // Popular keywords across the top pages, as quick recovery links.
+  const topPages = PAGES.map((p) => {
+    const rec = kwData.find((k) => k.path === p.path);
+    return { p, n: rec ? rec.n : 0, kw: rec && rec.keywords[0] ? rec.keywords[0].kw : p.nav };
+  }).sort((a, b) => b.n - a.n);
+  const quick = topPages.slice(0, 14).map(({ p, kw }) => `<a class="pill" href="${p.path}">${R.esc(kw)}</a>`).join("");
+  const sections = Object.keys(CLUSTERS).map((ck) => {
+    const cards = (groups[ck] || []).map((p) => {
+      const rec = kwData.find((k) => k.path === p.path);
+      const kw = rec && rec.keywords[0] ? rec.keywords[0].kw : p.nav;
+      return `<a class="relcard" href="${p.path}"><div class="k">${R.esc(CLUSTERS[ck].title)}</div><h3>${R.esc(p.nav)}</h3><p>${R.esc(kw)} →</p></a>`;
+    }).join("");
+    return `<section class="container" style="padding-top:10px"><div class="sec-head"><div><span class="eyebrow">${R.esc(CLUSTERS[ck].title)}</span><h2>${R.esc(CLUSTERS[ck].title)}</h2></div></div><div class="relgrid">${cards}</div></section>`;
+  }).join("\n");
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — popular eyewear guides | ADS Sports Eyewear</title>
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+</head>
+<body data-page="/404">
+${R.header()}
+<section class="ghero"><div class="container" style="grid-template-columns:1fr;text-align:center">
+  <div>
+    <span class="eyebrow">Page moved or not found</span>
+    <h1>We couldn't find that page</h1>
+    <p class="lede" style="margin-left:auto;margin-right:auto">The link may be old or the product has moved — but you're in the right place. Jump straight to our most popular guides below, or tell us what you're after and we'll help you find it.</p>
+    <div class="ghero-cta" style="justify-content:center"><a href="/guides.html" class="btn btn-solid">Browse all guides</a><a href="/" class="btn btn-light">Go to homepage</a></div>
+    <div class="kwcloud" style="justify-content:center;margin-top:26px;max-width:820px;margin-left:auto;margin-right:auto">${quick}</div>
+  </div>
+</div></section>
+${sections}
+${R.footer()}
+<script src="/assets/js/main.js"></script>
+</body>
+</html>`;
+}
+fs.writeFileSync(path.join(SITE_DIR, "404.html"), notFoundPage());
 
 console.log(`Built ${built} guide pages, /guides.html, sitemap.xml`);
 if (skipped.length) console.log(`Skipped (no content yet): ${skipped.join(", ")}`);

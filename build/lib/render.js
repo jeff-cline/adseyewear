@@ -34,7 +34,7 @@ function header() {
     <a href="/" class="brand"><img src="/assets/logo.jpg" alt="ADS Sports Eyewear logo"> ADS Sports Eyewear</a>
     <nav class="nav">
       <a href="/shop.html">Shop</a>
-      <span class="has-sub"><a href="/guides.html">Guides</a>${navDropdown()}</span>
+      <a href="/guides.html">Guides</a>
       <a href="/shop.html">Brands</a>
       <a href="/faq.html">FAQ</a>
     </nav>
@@ -251,7 +251,7 @@ function renderPage(page, kwData, content) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
 ${schemas.map((s) => `<script type="application/ld+json">${jld(s)}</script>`).join("\n")}
 </head>
 <body data-page="${attr(page.path)}" data-keyword="${attr(kws[0] ? kws[0].kw : page.key)}">
